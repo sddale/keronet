@@ -1,0 +1,32 @@
+config_version: 1
+arch: pit
+pde:
+  name: allen_cahn_2d
+  kwargs: {}
+hparams:
+  n_sensors: 81
+  weight_decay: 0.0001
+  d_model: 40
+  n_heads: 4
+  key_dim: 72
+  n_blocks: 3
+  pe_dim: 64
+training:
+  n_iter: 20000
+  init_lr: 0.001
+  end_lr_frac: 0.01
+  warmup_frac: 0.0
+  weight_decay: 0.0001
+  bcs_batch_size: 14
+  res_batch_size: 14
+metadata:
+  optuna_study: pit_allen_cahn_2d_c_500k
+  best_trial_number: 45
+  best_rel_l2_mean: 0.08982885628938675
+  best_rel_l2_std: 0.010529072023928165
+  param_count: 168913
+  train_time_sec: 3634.03337597847
+  completed_trials: 21
+  pruned_trials: 33
+  generated_at: '2026-07-27T08:44:36'
+  note: written by tools/config_from_trial.py (trial 45)

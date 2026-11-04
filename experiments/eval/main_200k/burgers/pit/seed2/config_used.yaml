@@ -1,0 +1,31 @@
+config_version: 1
+arch: pit
+pde:
+  name: burgers
+  kwargs: {}
+hparams:
+  n_sensors: 80
+  weight_decay: 0.0001
+  d_model: 96
+  n_heads: 4
+  key_dim: 32
+  n_blocks: 2
+  pe_dim: 32
+training:
+  n_iter: 20000
+  init_lr: 0.001
+  end_lr_frac: 0.01
+  warmup_frac: 0.0
+  weight_decay: 0.0001
+  bcs_batch_size: 14
+  res_batch_size: 14
+metadata:
+  optuna_study: pit_burgers
+  best_trial_number: 26
+  best_rel_l2_mean: 0.033962201327085495
+  best_rel_l2_std: 0.024406541138887405
+  param_count: 174433
+  train_time_sec: 838.7419788837433
+  completed_trials: 15
+  pruned_trials: 35
+  generated_at: '2026-04-30T16:14:45'

@@ -1,0 +1,33 @@
+config_version: 1
+arch: mkeronet
+pde:
+  name: advection
+  kwargs: {}
+hparams:
+  n_sensors: 80
+  weight_decay: 0.0001
+  L: 8
+  d_k: 16
+  branch_hidden: 192
+  trunk_hidden: 128
+  branch_layers_n: 3
+  trunk_layers_n: 3
+  mapping_size: 64
+training:
+  n_iter: 20000
+  init_lr: 0.001
+  end_lr_frac: 0.01
+  warmup_frac: 0.0
+  weight_decay: 0.0001
+  bcs_batch_size: 14
+  res_batch_size: 14
+metadata:
+  optuna_study: mkeronet_advection
+  best_trial_number: 42
+  best_rel_l2_mean: 0.014943686313927174
+  best_rel_l2_std: 0.009229027666151524
+  param_count: 167513
+  train_time_sec: 103.89654660224915
+  completed_trials: 19
+  pruned_trials: 38
+  generated_at: '2026-08-03T20:19:25'

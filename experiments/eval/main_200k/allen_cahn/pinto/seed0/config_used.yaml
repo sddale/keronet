@@ -1,0 +1,30 @@
+config_version: 1
+arch: pinto
+pde:
+  name: allen_cahn
+  kwargs: {}
+hparams:
+  n_sensors: 80
+  weight_decay: 0.0001
+  d_model: 96
+  n_heads: 1
+  key_dim: 32
+  n_cross_attn: 4
+training:
+  n_iter: 20000
+  init_lr: 0.001
+  end_lr_frac: 0.01
+  warmup_frac: 0.0
+  weight_decay: 0.0001
+  bcs_batch_size: 14
+  res_batch_size: 14
+metadata:
+  optuna_study: pinto_allen_cahn
+  best_trial_number: 6
+  best_rel_l2_mean: 0.013250917196273804
+  best_rel_l2_std: 0.009204824455082417
+  param_count: 171841
+  train_time_sec: 669.2692604064941
+  completed_trials: 15
+  pruned_trials: 59
+  generated_at: '2026-05-01T01:42:10'

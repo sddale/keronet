@@ -1,0 +1,33 @@
+config_version: 1
+arch: pi_deeponet
+pde:
+  name: advection
+  kwargs: {}
+hparams:
+  n_sensors: 80
+  weight_decay: 0.0001
+  branch_hidden: 128
+  trunk_hidden: 96
+  branch_layers_n: 3
+  trunk_layers_n: 5
+  p: 128
+  mapping_size: 64
+training:
+  n_iter: 20000
+  init_lr: 0.001
+  end_lr_frac: 0.01
+  warmup_frac: 0.0
+  weight_decay: 0.0001
+  bcs_batch_size: 14
+  res_batch_size: 14
+metadata:
+  optuna_study: pi_deeponet_advection_200k
+  best_trial_number: 7
+  best_rel_l2_mean: 0.014491251669824123
+  best_rel_l2_std: 0.010888868011534214
+  param_count: 121953
+  train_time_sec: 86.37284302711487
+  completed_trials: 19
+  pruned_trials: 35
+  generated_at: '2026-05-01T04:12:36'
+  note: written by tools/config_from_trial.py (trial 7)

@@ -1,0 +1,27 @@
+{
+  "arch": "pi_deeponet",
+  "evaluated_at": "2026-10-27T20:24:44",
+  "jax_version": "0.5.3",
+  "n_iter": 20000,
+  "n_test_ics": 100,
+  "param_count": 150785,
+  "pde": "allen_cahn",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "python_version": "3.13.13",
+  "rel_l2_max": 0.15361104905605316,
+  "rel_l2_mean": 0.03442812338471413,
+  "rel_l2_min": 0.009735497646033764,
+  "rel_l2_std": 0.034375835210084915,
+  "seed": 1,
+  "train_time_s": 201.7161808013916,
+  "training_kwargs": {
+    "bcs_batch": 14,
+    "end_lr_frac": 0.01,
+    "init_lr": 0.001,
+    "n_iter": 20000,
+    "res_batch": 14,
+    "warmup_frac": 0.0,
+    "weight_decay": 0.0001
+  },
+  "worst_ic_index": 64
+}

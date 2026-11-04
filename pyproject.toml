@@ -1,0 +1,24 @@
+[project]
+name = "keronet"
+version = "1.0.0"
+description = "Code, HPO studies, and evaluation artifacts for 'KerONet: Rethinking Cross-Attention for Physics-Informed Operator Learning' (NeurIPS 2026)."
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "jax[cuda12]>=0.5.3",
+    "matplotlib>=3.10.8",
+    "numpy>=2.4.4",
+    "optax>=0.2.8",
+    "optuna>=4.8.0",
+    "pandas>=3.0.2",
+    "pytest>=9.0.3",
+    "pyyaml>=6.0.3",
+    "scikit-learn>=1.8.0",
+    "scipy>=1.17.1",
+    "torch==2.5.1",
+    "tqdm>=4.67.3",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = ["venv", ".venv", "data_cache", "results", "docs", "configs", "optuna_runs", "plotting", "experiments", "tools"]

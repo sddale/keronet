@@ -1,0 +1,27 @@
+{
+  "arch": "pinto",
+  "evaluated_at": "2026-05-01T15:13:46",
+  "jax_version": "0.5.3",
+  "n_iter": 20000,
+  "n_test_ics": 100,
+  "param_count": 171841,
+  "pde": "allen_cahn",
+  "platform": "Linux-6.8.0-110-generic-x86_64-with-glibc2.35",
+  "python_version": "3.13.13",
+  "rel_l2_max": 0.08162983506917953,
+  "rel_l2_mean": 0.02410411275923252,
+  "rel_l2_min": 0.00631245132535696,
+  "rel_l2_std": 0.015584505163133144,
+  "seed": 4,
+  "train_time_s": 647.3188495635986,
+  "training_kwargs": {
+    "bcs_batch": 14,
+    "end_lr_frac": 0.01,
+    "init_lr": 0.001,
+    "n_iter": 20000,
+    "res_batch": 14,
+    "warmup_frac": 0.0,
+    "weight_decay": 0.0001
+  },
+  "worst_ic_index": 17
+}

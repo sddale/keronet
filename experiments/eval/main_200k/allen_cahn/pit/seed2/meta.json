@@ -1,0 +1,27 @@
+{
+  "arch": "pit",
+  "evaluated_at": "2026-05-01T15:42:55",
+  "jax_version": "0.5.3",
+  "n_iter": 20000,
+  "n_test_ics": 100,
+  "param_count": 102209,
+  "pde": "allen_cahn",
+  "platform": "Linux-6.8.0-110-generic-x86_64-with-glibc2.35",
+  "python_version": "3.13.13",
+  "rel_l2_max": 0.47814321517944336,
+  "rel_l2_mean": 0.11767809092998505,
+  "rel_l2_min": 0.024777932092547417,
+  "rel_l2_std": 0.10250172764062881,
+  "seed": 2,
+  "train_time_s": 574.7372226715088,
+  "training_kwargs": {
+    "bcs_batch": 14,
+    "end_lr_frac": 0.01,
+    "init_lr": 0.001,
+    "n_iter": 20000,
+    "res_batch": 14,
+    "warmup_frac": 0.0,
+    "weight_decay": 0.0001
+  },
+  "worst_ic_index": 17
+}

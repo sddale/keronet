@@ -1,0 +1,31 @@
+config_version: 1
+arch: pinto
+pde:
+  name: allen_cahn_2d
+  kwargs: {}
+hparams:
+  n_sensors: 81
+  weight_decay: 0.0001
+  d_model: 40
+  n_heads: 8
+  key_dim: 136
+  n_cross_attn: 2
+training:
+  n_iter: 20000
+  init_lr: 0.001
+  end_lr_frac: 0.01
+  warmup_frac: 0.0
+  weight_decay: 0.0001
+  bcs_batch_size: 14
+  res_batch_size: 14
+metadata:
+  optuna_study: pinto_allen_cahn_2d_c_500k
+  best_trial_number: 31
+  best_rel_l2_mean: 0.043981924653053284
+  best_rel_l2_std: 0.009530408307909966
+  param_count: 369969
+  train_time_sec: 3677.1144320964813
+  completed_trials: 21
+  pruned_trials: 30
+  generated_at: '2026-07-27T10:42:01'
+  note: written by tools/config_from_trial.py (trial 31)

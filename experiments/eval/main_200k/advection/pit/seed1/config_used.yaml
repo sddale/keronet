@@ -1,0 +1,31 @@
+config_version: 1
+arch: pit
+pde:
+  name: advection
+  kwargs: {}
+hparams:
+  n_sensors: 80
+  weight_decay: 0.0001
+  d_model: 96
+  n_heads: 4
+  key_dim: 32
+  n_blocks: 1
+  pe_dim: 64
+training:
+  n_iter: 20000
+  init_lr: 0.001
+  end_lr_frac: 0.01
+  warmup_frac: 0.0
+  weight_decay: 0.0001
+  bcs_batch_size: 14
+  res_batch_size: 14
+metadata:
+  optuna_study: pit_advection
+  best_trial_number: 32
+  best_rel_l2_mean: 0.02193189412355423
+  best_rel_l2_std: 0.013621359132230282
+  param_count: 115201
+  train_time_sec: 227.00949335098267
+  completed_trials: 19
+  pruned_trials: 23
+  generated_at: '2026-05-01T12:38:10'

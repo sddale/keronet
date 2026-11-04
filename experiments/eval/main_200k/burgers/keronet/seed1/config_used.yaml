@@ -1,0 +1,35 @@
+config_version: 1
+arch: keronet
+pde:
+  name: burgers
+  kwargs: {}
+hparams:
+  n_sensors: 80
+  weight_decay: 0.0001
+  L: 16
+  d_k: 32
+  d_v: 32
+  post_mlp_hidden: 16
+  branch_hidden: 96
+  trunk_hidden: 128
+  branch_layers_n: 2
+  trunk_layers_n: 3
+  mapping_size: 64
+training:
+  n_iter: 20000
+  init_lr: 0.001
+  end_lr_frac: 0.01
+  warmup_frac: 0.0
+  weight_decay: 0.0001
+  bcs_batch_size: 14
+  res_batch_size: 14
+metadata:
+  optuna_study: keronet_burgers
+  best_trial_number: 17
+  best_rel_l2_mean: 0.020024070516228676
+  best_rel_l2_std: 0.011947767809033394
+  param_count: 170898
+  train_time_sec: 283.4513063430786
+  completed_trials: 15
+  pruned_trials: 36
+  generated_at: '2026-05-01T02:23:18'

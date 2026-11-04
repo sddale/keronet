@@ -1,0 +1,27 @@
+{
+  "arch": "keronet",
+  "evaluated_at": "2026-07-26T23:32:31",
+  "jax_version": "0.5.3",
+  "n_iter": 20000,
+  "n_test_ics": 100,
+  "param_count": 84834,
+  "pde": "burgers",
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+  "python_version": "3.13.13",
+  "rel_l2_max": 0.24827700853347778,
+  "rel_l2_mean": 0.041499752551317215,
+  "rel_l2_min": 0.00770108588039875,
+  "rel_l2_std": 0.041434939950704575,
+  "seed": 2,
+  "train_time_s": 182.33427834510803,
+  "training_kwargs": {
+    "bcs_batch": 14,
+    "end_lr_frac": 0.01,
+    "init_lr": 0.001,
+    "n_iter": 20000,
+    "res_batch": 14,
+    "warmup_frac": 0.0,
+    "weight_decay": 0.0001
+  },
+  "worst_ic_index": 17
+}

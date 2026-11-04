@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software or its artifacts, please cite the paper."
+title: "KerONet: Rethinking Cross-Attention for Physics-Informed Operator Learning"
+authors:
+  - family-names: Dale
+    given-names: Seth
+  - family-names: Koh
+    given-names: Carolyn
+  - family-names: Mehta
+    given-names: Dinesh
+license: MIT
+repository-code: "https://github.com/sddale/keronet"
+preferred-citation:
+  type: conference-paper
+  title: "KerONet: Rethinking Cross-Attention for Physics-Informed Operator Learning"
+  authors:
+    - family-names: Dale
+      given-names: Seth
+    - family-names: Koh
+      given-names: Carolyn
+    - family-names: Mehta
+      given-names: Dinesh
+  collection-title: "Advances in Neural Information Processing Systems (NeurIPS)"
+  year: 2026

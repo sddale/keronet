@@ -1,0 +1,27 @@
+{
+  "arch": "mkeronet",
+  "evaluated_at": "2026-10-24T11:37:56",
+  "jax_version": "0.5.3",
+  "n_iter": 20000,
+  "n_test_ics": 100,
+  "param_count": 165089,
+  "pde": "allen_cahn_2d",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "python_version": "3.13.13",
+  "rel_l2_max": 0.15720820426940918,
+  "rel_l2_mean": 0.0750386118888855,
+  "rel_l2_min": 0.0420587919652462,
+  "rel_l2_std": 0.019515711814165115,
+  "seed": 2,
+  "train_time_s": 383.4341359138489,
+  "training_kwargs": {
+    "bcs_batch": 14,
+    "end_lr_frac": 0.01,
+    "init_lr": 0.001,
+    "n_iter": 20000,
+    "res_batch": 14,
+    "warmup_frac": 0.0,
+    "weight_decay": 0.0001
+  },
+  "worst_ic_index": 63
+}

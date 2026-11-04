@@ -1,0 +1,31 @@
+config_version: 1
+arch: pit
+pde:
+  name: diffusion_reaction
+  kwargs: {}
+hparams:
+  n_sensors: 80
+  weight_decay: 0.0001
+  d_model: 64
+  n_heads: 1
+  key_dim: 64
+  n_blocks: 3
+  pe_dim: 32
+training:
+  n_iter: 20000
+  init_lr: 0.001
+  end_lr_frac: 0.01
+  warmup_frac: 0.0
+  weight_decay: 0.0001
+  bcs_batch_size: 14
+  res_batch_size: 14
+metadata:
+  optuna_study: pit_diffusion_reaction
+  best_trial_number: 79
+  best_rel_l2_mean: 0.008558832108974457
+  best_rel_l2_std: 0.005133583210408688
+  param_count: 94145
+  train_time_sec: 504.3572051525116
+  completed_trials: 24
+  pruned_trials: 96
+  generated_at: '2026-05-01T20:35:49'

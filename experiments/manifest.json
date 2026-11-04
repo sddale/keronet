@@ -1,0 +1,3476 @@
+{
+    "_doc": "Release manifest: every (cell, arch) result with its evaluation and HPO artifacts. See README.md. `rule_completed`: the number of non-pruned trials at which the paper's convergence rule holds for the study's group (tools/hpo_compute.py); a study file may hold later trials in some cases. `gpu_seconds_correction`: re-timed minus recorded duration of trials that had shared a GPU. 'paper' gives the tables and figures (LaTeX labels) in the manuscript.",
+    "entries": [
+        {
+            "cell": "main_200k/burgers",
+            "arch": "pi_deeponet",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:main_results, tab:train_time, tab:pairwise, tab:results_detail, tab:best_hparams, fig:solution_panels, fig:strip_plot, fig:loss, fig:convergence, tab:budget_acc (200k), tab:budget_pairwise (200k), tab:budget_cost (200k), tab:ablation, tab:components",
+            "notes": "Trunk Fourier lift normalizes the query coordinates to [0, 1], as KerONet's does; study rerun from scratch with the cell's original search space and protocol (October 2026).",
+            "eval_dir": "experiments/eval/main_200k/burgers/pi_deeponet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.1998509019613266,
+                    "n_test_ics": 100,
+                    "param_count": 160897,
+                    "train_time_s": 106.05696058273315,
+                    "evaluated_at": "2026-10-27T14:27:21"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.2672138214111328,
+                    "n_test_ics": 100,
+                    "param_count": 160897,
+                    "train_time_s": 92.57486724853516,
+                    "evaluated_at": "2026-10-27T14:28:57"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.24302852153778076,
+                    "n_test_ics": 100,
+                    "param_count": 160897,
+                    "train_time_s": 92.51292753219604,
+                    "evaluated_at": "2026-10-27T14:30:33"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.2394953966140747,
+                    "n_test_ics": 100,
+                    "param_count": 160897,
+                    "train_time_s": 92.46339654922485,
+                    "evaluated_at": "2026-10-27T14:32:10"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.2224428504705429,
+                    "n_test_ics": 100,
+                    "param_count": 160897,
+                    "train_time_s": 92.85481476783752,
+                    "evaluated_at": "2026-10-27T14:33:46"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/main_200k/burgers/pi_deeponet",
+            "study_name": "pi_deeponet_burgers_200k",
+            "completed_trials": 16,
+            "pruned_trials": 69,
+            "best_trial": 4,
+            "study_sha256": "617f033b093d1fc3c511524dc9ce89cf9ff4b387c77566e91e28a2f9b4851b38",
+            "evaluated_trial": 4,
+            "rule_completed": 16
+        },
+        {
+            "cell": "main_200k/burgers",
+            "arch": "pit",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:main_results, tab:train_time, tab:pairwise, tab:results_detail, tab:best_hparams, fig:solution_panels, fig:strip_plot, fig:loss, fig:convergence, tab:budget_acc (200k), tab:budget_pairwise (200k), tab:budget_cost (200k)",
+            "notes": "Its best trial fell within the last two of 15 non-pruned trials, so the group was extended: study extended 15->16 under the convergence rule (2026-10-22); selection unchanged (#26).",
+            "eval_dir": "experiments/eval/main_200k/burgers/pit",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.04442376270890236,
+                    "n_test_ics": 100,
+                    "param_count": 174433,
+                    "train_time_s": 873.7338440418243,
+                    "evaluated_at": "2026-05-01T12:27:45"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.08306892216205597,
+                    "n_test_ics": 100,
+                    "param_count": 174433,
+                    "train_time_s": 851.8661522865295,
+                    "evaluated_at": "2026-05-01T12:42:03"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.0737520232796669,
+                    "n_test_ics": 100,
+                    "param_count": 174433,
+                    "train_time_s": 849.2412514686584,
+                    "evaluated_at": "2026-05-01T12:56:19"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.07129649817943573,
+                    "n_test_ics": 100,
+                    "param_count": 174433,
+                    "train_time_s": 849.5030100345612,
+                    "evaluated_at": "2026-05-01T13:10:35"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.08022209256887436,
+                    "n_test_ics": 100,
+                    "param_count": 174433,
+                    "train_time_s": 845.6183166503906,
+                    "evaluated_at": "2026-05-01T13:24:47"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/main_200k/burgers/pit",
+            "study_name": "pit_burgers",
+            "completed_trials": 16,
+            "pruned_trials": 36,
+            "best_trial": 26,
+            "study_sha256": "5a9e8b8485c179abc4375095a7722a2afe411835ce922f8de5a55212d8a5eb81",
+            "evaluated_trial": 26,
+            "rule_completed": 16
+        },
+        {
+            "cell": "main_200k/burgers",
+            "arch": "pinto",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:main_results, tab:train_time, tab:pairwise, tab:results_detail, tab:best_hparams, fig:solution_panels, fig:strip_plot, fig:loss, fig:convergence, tab:budget_acc (200k), tab:budget_pairwise (200k), tab:budget_cost (200k)",
+            "eval_dir": "experiments/eval/main_200k/burgers/pinto",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.037760019302368164,
+                    "n_test_ics": 100,
+                    "param_count": 145985,
+                    "train_time_s": 1018.8130588531494,
+                    "evaluated_at": "2026-05-01T11:06:18"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.07720837742090225,
+                    "n_test_ics": 100,
+                    "param_count": 145985,
+                    "train_time_s": 993.1287288665771,
+                    "evaluated_at": "2026-05-01T11:22:57"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.051487892866134644,
+                    "n_test_ics": 100,
+                    "param_count": 145985,
+                    "train_time_s": 992.9724328517914,
+                    "evaluated_at": "2026-05-01T11:39:35"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.06966954469680786,
+                    "n_test_ics": 100,
+                    "param_count": 145985,
+                    "train_time_s": 997.3113629817963,
+                    "evaluated_at": "2026-05-01T11:56:18"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.07256161421537399,
+                    "n_test_ics": 100,
+                    "param_count": 145985,
+                    "train_time_s": 998.3210184574127,
+                    "evaluated_at": "2026-05-01T12:13:02"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/main_200k/burgers/pinto",
+            "study_name": "pinto_burgers",
+            "completed_trials": 16,
+            "pruned_trials": 38,
+            "best_trial": 23,
+            "study_sha256": "e034351a8c4f4081a0b180fac4085569f09d517eeaa043b57aba8b7a604e14bc",
+            "evaluated_trial": 23,
+            "notes": "Study extended 15->16 under the convergence rule (2026-10-22); selection unchanged (#23).",
+            "rule_completed": 16
+        },
+        {
+            "cell": "main_200k/burgers",
+            "arch": "keronet",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:main_results, tab:train_time, tab:pairwise, tab:results_detail, tab:best_hparams, fig:solution_panels, fig:strip_plot, fig:loss, fig:convergence, tab:budget_acc (200k), tab:budget_pairwise (200k), tab:budget_cost (200k), tab:ablation, tab:components, fig:s_sweep (selected S)",
+            "eval_dir": "experiments/eval/main_200k/burgers/keronet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.031914323568344116,
+                    "n_test_ics": 100,
+                    "param_count": 170898,
+                    "train_time_s": 288.2501006126404,
+                    "evaluated_at": "2026-05-01T10:21:52"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.030729755759239197,
+                    "n_test_ics": 100,
+                    "param_count": 170898,
+                    "train_time_s": 275.47539806365967,
+                    "evaluated_at": "2026-05-01T10:26:33"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.03011760488152504,
+                    "n_test_ics": 100,
+                    "param_count": 170898,
+                    "train_time_s": 276.0488016605377,
+                    "evaluated_at": "2026-05-01T10:31:13"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.040051259100437164,
+                    "n_test_ics": 100,
+                    "param_count": 170898,
+                    "train_time_s": 281.3206830024719,
+                    "evaluated_at": "2026-05-01T10:35:59"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.02385720983147621,
+                    "n_test_ics": 100,
+                    "param_count": 170898,
+                    "train_time_s": 276.9520297050476,
+                    "evaluated_at": "2026-05-01T10:40:41"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/main_200k/burgers/keronet",
+            "study_name": "keronet_burgers",
+            "completed_trials": 16,
+            "pruned_trials": 36,
+            "best_trial": 17,
+            "study_sha256": "8fb37a6a87b368ad5d80083dbfe1fe2bce044757655ed2ea7fbd21048f6606ed",
+            "evaluated_trial": 17,
+            "notes": "Study extended 15->16 under the convergence rule (2026-10-22); selection unchanged (#17).",
+            "rule_completed": 16
+        },
+        {
+            "cell": "main_200k/burgers",
+            "arch": "mkeronet",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:ablation, tab:components",
+            "notes": "Study extended 15->17 under the convergence rule (2026-10-20); selection unchanged (#25).",
+            "eval_dir": "experiments/eval/main_200k/burgers/mkeronet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.017665239050984383,
+                    "n_test_ics": 100,
+                    "param_count": 111729,
+                    "train_time_s": 226.2939395904541,
+                    "evaluated_at": "2026-07-27T17:45:16"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.029001962393522263,
+                    "n_test_ics": 100,
+                    "param_count": 111729,
+                    "train_time_s": 212.2254457473755,
+                    "evaluated_at": "2026-07-27T17:27:29"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.023952459916472435,
+                    "n_test_ics": 100,
+                    "param_count": 111729,
+                    "train_time_s": 212.35393404960632,
+                    "evaluated_at": "2026-07-27T17:31:05"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.0262522641569376,
+                    "n_test_ics": 100,
+                    "param_count": 111729,
+                    "train_time_s": 212.4796280860901,
+                    "evaluated_at": "2026-07-27T17:34:41"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.019815467298030853,
+                    "n_test_ics": 100,
+                    "param_count": 111729,
+                    "train_time_s": 211.89936900138855,
+                    "evaluated_at": "2026-07-27T17:38:17"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/main_200k/burgers/mkeronet",
+            "study_name": "mkeronet_burgers",
+            "completed_trials": 17,
+            "pruned_trials": 10,
+            "best_trial": 25,
+            "study_sha256": "0a8224c7fb22fda80b65cb73c748aaf835e2924c407499217f592e39025e6a1c",
+            "evaluated_trial": 25,
+            "rule_completed": 17
+        },
+        {
+            "cell": "main_200k/advection",
+            "arch": "pi_deeponet",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:main_results, tab:train_time, tab:pairwise, tab:results_detail, tab:best_hparams, fig:solution_panels, fig:strip_plot, fig:loss, fig:convergence, tab:ablation, tab:components",
+            "notes": "Trunk Fourier lift normalizes the query coordinates to [0, 1], as KerONet's does; study rerun from scratch with the cell's original search space and protocol (October 2026).",
+            "eval_dir": "experiments/eval/main_200k/advection/pi_deeponet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.01788119226694107,
+                    "n_test_ics": 100,
+                    "param_count": 121953,
+                    "train_time_s": 92.53254532814026,
+                    "evaluated_at": "2026-10-27T13:00:15"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.023805515840649605,
+                    "n_test_ics": 100,
+                    "param_count": 121953,
+                    "train_time_s": 81.26537752151489,
+                    "evaluated_at": "2026-10-27T13:01:40"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.018165497109293938,
+                    "n_test_ics": 100,
+                    "param_count": 121953,
+                    "train_time_s": 81.73584008216858,
+                    "evaluated_at": "2026-10-27T13:03:06"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.01737263984978199,
+                    "n_test_ics": 100,
+                    "param_count": 121953,
+                    "train_time_s": 81.48302006721497,
+                    "evaluated_at": "2026-10-27T13:04:31"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.017110586166381836,
+                    "n_test_ics": 100,
+                    "param_count": 121953,
+                    "train_time_s": 81.42738556861877,
+                    "evaluated_at": "2026-10-27T13:05:57"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/main_200k/advection/pi_deeponet",
+            "study_name": "pi_deeponet_advection_200k",
+            "completed_trials": 19,
+            "pruned_trials": 35,
+            "best_trial": 7,
+            "study_sha256": "9ca5bc1beee64aa1f7551e8b7ebe4842fdbbddf92924c41594830ca406a6cd66",
+            "evaluated_trial": 7,
+            "rule_completed": 19
+        },
+        {
+            "cell": "main_200k/advection",
+            "arch": "pit",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:main_results, tab:train_time, tab:pairwise, tab:results_detail, tab:best_hparams, fig:solution_panels, fig:strip_plot, fig:loss, fig:convergence",
+            "eval_dir": "experiments/eval/main_200k/advection/pit",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.04095881059765816,
+                    "n_test_ics": 100,
+                    "param_count": 115201,
+                    "train_time_s": 254.69874930381775,
+                    "evaluated_at": "2026-05-01T16:25:55"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.0894155502319336,
+                    "n_test_ics": 100,
+                    "param_count": 115201,
+                    "train_time_s": 224.57178473472595,
+                    "evaluated_at": "2026-05-01T16:29:45"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.06819049268960953,
+                    "n_test_ics": 100,
+                    "param_count": 115201,
+                    "train_time_s": 225.04233694076538,
+                    "evaluated_at": "2026-05-01T16:33:36"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.09424539655447006,
+                    "n_test_ics": 100,
+                    "param_count": 115201,
+                    "train_time_s": 225.87820434570312,
+                    "evaluated_at": "2026-05-01T16:37:27"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.036748990416526794,
+                    "n_test_ics": 100,
+                    "param_count": 115201,
+                    "train_time_s": 225.87240028381348,
+                    "evaluated_at": "2026-05-01T16:41:19"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/main_200k/advection/pit",
+            "study_name": "pit_advection",
+            "completed_trials": 19,
+            "pruned_trials": 23,
+            "best_trial": 32,
+            "study_sha256": "a97139d0d5268a7aedd417c4616416fc3f2092f8fef70e59763a43de24e4e610",
+            "evaluated_trial": 32,
+            "rule_completed": 19
+        },
+        {
+            "cell": "main_200k/advection",
+            "arch": "pinto",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:main_results, tab:train_time, tab:pairwise, tab:results_detail, tab:best_hparams, fig:solution_panels, fig:strip_plot, fig:loss, fig:convergence",
+            "eval_dir": "experiments/eval/main_200k/advection/pinto",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.02862493321299553,
+                    "n_test_ics": 100,
+                    "param_count": 187521,
+                    "train_time_s": 570.2251505851746,
+                    "evaluated_at": "2026-05-01T10:43:23"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.03582961484789848,
+                    "n_test_ics": 100,
+                    "param_count": 187521,
+                    "train_time_s": 547.6334838867188,
+                    "evaluated_at": "2026-05-01T10:52:37"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.03151720017194748,
+                    "n_test_ics": 100,
+                    "param_count": 187521,
+                    "train_time_s": 544.0368776321411,
+                    "evaluated_at": "2026-05-01T11:01:47"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.042051445692777634,
+                    "n_test_ics": 100,
+                    "param_count": 187521,
+                    "train_time_s": 569.0460636615753,
+                    "evaluated_at": "2026-05-01T11:36:25"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.032730985432863235,
+                    "n_test_ics": 100,
+                    "param_count": 187521,
+                    "train_time_s": 545.1206412315369,
+                    "evaluated_at": "2026-05-01T11:45:36"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/main_200k/advection/pinto",
+            "study_name": "pinto_advection",
+            "completed_trials": 19,
+            "pruned_trials": 73,
+            "best_trial": 23,
+            "study_sha256": "041873fb6dc5eb893fb8b7fa641e1bb4b090220860db183fb04deb70ebdfa356",
+            "evaluated_trial": 23,
+            "rule_completed": 19
+        },
+        {
+            "cell": "main_200k/advection",
+            "arch": "keronet",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:main_results, tab:train_time, tab:pairwise, tab:results_detail, tab:best_hparams, fig:solution_panels, fig:strip_plot, fig:loss, fig:convergence, tab:ablation, tab:components, fig:advection_error_fft",
+            "eval_dir": "experiments/eval/main_200k/advection/keronet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.016095682978630066,
+                    "n_test_ics": 100,
+                    "param_count": 153266,
+                    "train_time_s": 141.78446078300476,
+                    "evaluated_at": "2026-05-01T16:13:00"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.016489066183567047,
+                    "n_test_ics": 100,
+                    "param_count": 153266,
+                    "train_time_s": 122.91407704353333,
+                    "evaluated_at": "2026-05-01T16:15:07"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.019058002158999443,
+                    "n_test_ics": 100,
+                    "param_count": 153266,
+                    "train_time_s": 120.73260951042175,
+                    "evaluated_at": "2026-05-01T16:17:13"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.02138293720781803,
+                    "n_test_ics": 100,
+                    "param_count": 153266,
+                    "train_time_s": 123.22563052177429,
+                    "evaluated_at": "2026-05-01T16:19:21"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.02150401659309864,
+                    "n_test_ics": 100,
+                    "param_count": 153266,
+                    "train_time_s": 124.35210990905762,
+                    "evaluated_at": "2026-05-01T16:21:31"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/main_200k/advection/keronet",
+            "study_name": "keronet_advection",
+            "completed_trials": 19,
+            "pruned_trials": 36,
+            "best_trial": 46,
+            "study_sha256": "b47e7c01229d2f54f293b7271b6f131b0a72b96e01d6386164e1e4582001b263",
+            "evaluated_trial": 46,
+            "rule_completed": 19
+        },
+        {
+            "cell": "main_200k/advection",
+            "arch": "mkeronet",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:ablation, tab:components",
+            "eval_dir": "experiments/eval/main_200k/advection/mkeronet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.020884225144982338,
+                    "n_test_ics": 100,
+                    "param_count": 167513,
+                    "train_time_s": 117.89502429962158,
+                    "evaluated_at": "2026-08-03T20:23:13"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.01787659339606762,
+                    "n_test_ics": 100,
+                    "param_count": 167513,
+                    "train_time_s": 107.98242855072021,
+                    "evaluated_at": "2026-08-03T20:25:05"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.019520167261362076,
+                    "n_test_ics": 100,
+                    "param_count": 167513,
+                    "train_time_s": 108.13804793357849,
+                    "evaluated_at": "2026-08-03T20:26:56"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.022134194150567055,
+                    "n_test_ics": 100,
+                    "param_count": 167513,
+                    "train_time_s": 108.42575430870056,
+                    "evaluated_at": "2026-08-03T20:28:49"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.018102575093507767,
+                    "n_test_ics": 100,
+                    "param_count": 167513,
+                    "train_time_s": 108.29846692085266,
+                    "evaluated_at": "2026-08-03T20:30:41"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/main_200k/advection/mkeronet",
+            "study_name": "mkeronet_advection",
+            "completed_trials": 19,
+            "pruned_trials": 38,
+            "best_trial": 42,
+            "study_sha256": "2f5462e5b415a7908d2d26b598dac1a0d25a517fd8cf97b7bf32ac91baf9d099",
+            "evaluated_trial": 42,
+            "rule_completed": 19
+        },
+        {
+            "cell": "main_200k/diffusion_reaction",
+            "arch": "pi_deeponet",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:main_results, tab:train_time, tab:pairwise, tab:results_detail, tab:best_hparams, fig:solution_panels_app, fig:strip_plot, fig:loss, fig:convergence, tab:ablation, tab:components",
+            "notes": "Trunk Fourier lift normalizes the query coordinates to [0, 1], as KerONet's does; study rerun from scratch with the cell's original search space and protocol (October 2026).",
+            "eval_dir": "experiments/eval/main_200k/diffusion_reaction/pi_deeponet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.007487886119633913,
+                    "n_test_ics": 100,
+                    "param_count": 103841,
+                    "train_time_s": 148.54775834083557,
+                    "evaluated_at": "2026-10-27T16:31:46"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.007891308516263962,
+                    "n_test_ics": 100,
+                    "param_count": 103841,
+                    "train_time_s": 134.5925600528717,
+                    "evaluated_at": "2026-10-27T16:34:04"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.0068425689823925495,
+                    "n_test_ics": 100,
+                    "param_count": 103841,
+                    "train_time_s": 134.78531742095947,
+                    "evaluated_at": "2026-10-27T16:36:23"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.005973464343696833,
+                    "n_test_ics": 100,
+                    "param_count": 103841,
+                    "train_time_s": 134.36443281173706,
+                    "evaluated_at": "2026-10-27T16:38:41"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.006135251373052597,
+                    "n_test_ics": 100,
+                    "param_count": 103841,
+                    "train_time_s": 134.4870162010193,
+                    "evaluated_at": "2026-10-27T16:41:00"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/main_200k/diffusion_reaction/pi_deeponet",
+            "study_name": "pi_deeponet_diffusion_reaction_200k",
+            "completed_trials": 24,
+            "pruned_trials": 109,
+            "best_trial": 109,
+            "study_sha256": "35612cf7331d46f73b7f10a90ec890666325502342b6d6a7691f58d80e96b81a",
+            "evaluated_trial": 109,
+            "rule_completed": 24
+        },
+        {
+            "cell": "main_200k/diffusion_reaction",
+            "arch": "pit",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:main_results, tab:train_time, tab:pairwise, tab:results_detail, tab:best_hparams, fig:solution_panels_app, fig:strip_plot, fig:loss, fig:convergence",
+            "eval_dir": "experiments/eval/main_200k/diffusion_reaction/pit",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.013433504849672318,
+                    "n_test_ics": 100,
+                    "param_count": 94145,
+                    "train_time_s": 522.3591275215149,
+                    "evaluated_at": "2026-05-02T00:12:19"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.02947372943162918,
+                    "n_test_ics": 100,
+                    "param_count": 94145,
+                    "train_time_s": 504.2350027561188,
+                    "evaluated_at": "2026-05-02T00:20:49"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.022308463230729103,
+                    "n_test_ics": 100,
+                    "param_count": 94145,
+                    "train_time_s": 504.47443985939026,
+                    "evaluated_at": "2026-05-02T00:29:19"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.013541865162551403,
+                    "n_test_ics": 100,
+                    "param_count": 94145,
+                    "train_time_s": 504.32795548439026,
+                    "evaluated_at": "2026-05-02T00:37:49"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.021431274712085724,
+                    "n_test_ics": 100,
+                    "param_count": 94145,
+                    "train_time_s": 504.82585310935974,
+                    "evaluated_at": "2026-05-02T00:46:19"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/main_200k/diffusion_reaction/pit",
+            "study_name": "pit_diffusion_reaction",
+            "completed_trials": 24,
+            "pruned_trials": 96,
+            "best_trial": 79,
+            "study_sha256": "38b7dd408c36a9dee11bb29509cbfb90d18559871ad6fd82fcc812fb44d9c4c3",
+            "evaluated_trial": 79,
+            "rule_completed": 24
+        },
+        {
+            "cell": "main_200k/diffusion_reaction",
+            "arch": "pinto",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:main_results, tab:train_time, tab:pairwise, tab:results_detail, tab:best_hparams, fig:solution_panels_app, fig:strip_plot, fig:loss, fig:convergence",
+            "eval_dir": "experiments/eval/main_200k/diffusion_reaction/pinto",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.013677031733095646,
+                    "n_test_ics": 100,
+                    "param_count": 177889,
+                    "train_time_s": 674.5777318477631,
+                    "evaluated_at": "2026-05-01T23:19:54"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.024311134591698647,
+                    "n_test_ics": 100,
+                    "param_count": 177889,
+                    "train_time_s": 647.4017534255981,
+                    "evaluated_at": "2026-05-01T23:30:47"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.010785373859107494,
+                    "n_test_ics": 100,
+                    "param_count": 177889,
+                    "train_time_s": 648.3737185001373,
+                    "evaluated_at": "2026-05-01T23:41:41"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.014519942924380302,
+                    "n_test_ics": 100,
+                    "param_count": 177889,
+                    "train_time_s": 648.4421062469482,
+                    "evaluated_at": "2026-05-01T23:52:35"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.014581774361431599,
+                    "n_test_ics": 100,
+                    "param_count": 177889,
+                    "train_time_s": 648.0455164909363,
+                    "evaluated_at": "2026-05-02T00:03:29"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/main_200k/diffusion_reaction/pinto",
+            "study_name": "pinto_diffusion_reaction",
+            "completed_trials": 24,
+            "pruned_trials": 112,
+            "best_trial": 7,
+            "study_sha256": "2c5a42606fa60bc3ca931ac808543041e531b1d0f993797a70f46f1ccaafcd8b",
+            "evaluated_trial": 7,
+            "rule_completed": 24
+        },
+        {
+            "cell": "main_200k/diffusion_reaction",
+            "arch": "keronet",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:main_results, tab:train_time, tab:pairwise, tab:results_detail, tab:best_hparams, fig:solution_panels_app, fig:strip_plot, fig:loss, fig:convergence, tab:ablation, tab:components",
+            "eval_dir": "experiments/eval/main_200k/diffusion_reaction/keronet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.007049392908811569,
+                    "n_test_ics": 100,
+                    "param_count": 177378,
+                    "train_time_s": 229.7971215248108,
+                    "evaluated_at": "2026-05-01T22:40:25"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.005917566828429699,
+                    "n_test_ics": 100,
+                    "param_count": 177378,
+                    "train_time_s": 211.45298647880554,
+                    "evaluated_at": "2026-05-01T22:44:01"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.006362082902342081,
+                    "n_test_ics": 100,
+                    "param_count": 177378,
+                    "train_time_s": 212.38315176963806,
+                    "evaluated_at": "2026-05-01T22:47:39"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.006120003294199705,
+                    "n_test_ics": 100,
+                    "param_count": 177378,
+                    "train_time_s": 211.52250742912292,
+                    "evaluated_at": "2026-05-01T22:51:15"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.0062697287648916245,
+                    "n_test_ics": 100,
+                    "param_count": 177378,
+                    "train_time_s": 212.69278264045715,
+                    "evaluated_at": "2026-05-01T22:54:53"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/main_200k/diffusion_reaction/keronet",
+            "study_name": "keronet_diffusion_reaction",
+            "completed_trials": 24,
+            "pruned_trials": 155,
+            "best_trial": 157,
+            "study_sha256": "7e07c6ba301fc482e834ebdb990bacc85f5b11fa0911760ed130a981d263d722",
+            "evaluated_trial": 157,
+            "rule_completed": 24
+        },
+        {
+            "cell": "main_200k/diffusion_reaction",
+            "arch": "mkeronet",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:ablation, tab:components",
+            "eval_dir": "experiments/eval/main_200k/diffusion_reaction/mkeronet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.0076111070811748505,
+                    "n_test_ics": 100,
+                    "param_count": 80997,
+                    "train_time_s": 138.7887258529663,
+                    "evaluated_at": "2026-08-03T19:56:39"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.08515144139528275,
+                    "n_test_ics": 100,
+                    "param_count": 80997,
+                    "train_time_s": 139.8740041255951,
+                    "evaluated_at": "2026-08-03T20:09:08"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.008229363709688187,
+                    "n_test_ics": 100,
+                    "param_count": 80997,
+                    "train_time_s": 125.63921809196472,
+                    "evaluated_at": "2026-08-03T20:00:59"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.008589152246713638,
+                    "n_test_ics": 100,
+                    "param_count": 80997,
+                    "train_time_s": 125.85359954833984,
+                    "evaluated_at": "2026-08-03T20:03:09"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.007410568650811911,
+                    "n_test_ics": 100,
+                    "param_count": 80997,
+                    "train_time_s": 125.33647775650024,
+                    "evaluated_at": "2026-08-03T20:05:19"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/main_200k/diffusion_reaction/mkeronet",
+            "study_name": "mkeronet_diffusion_reaction",
+            "completed_trials": 24,
+            "pruned_trials": 94,
+            "best_trial": 56,
+            "study_sha256": "78162a950c1b1edd15cb50e1aa742fc96cda1af66a3ba60407af4e9982325f19",
+            "evaluated_trial": 56,
+            "rule_completed": 24
+        },
+        {
+            "cell": "main_200k/allen_cahn",
+            "arch": "pi_deeponet",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:main_results, tab:train_time, tab:pairwise, tab:results_detail, tab:best_hparams, fig:solution_panels_app, fig:strip_plot, fig:loss, fig:convergence, tab:budget_acc (200k), tab:budget_pairwise (200k), tab:budget_cost (200k), tab:ablation, tab:components",
+            "notes": "Trunk Fourier lift normalizes the query coordinates to [0, 1], as KerONet's does; study rerun from scratch with the cell's original search space and protocol (October 2026). Trials #2, #3, #4, #6, #7 and #10 shared their GPU with another job and were re-timed alone; gpu_seconds_correction (-258.0 s) applies the difference to the study's GPU-hours.",
+            "eval_dir": "experiments/eval/main_200k/allen_cahn/pi_deeponet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.030312228947877884,
+                    "n_test_ics": 100,
+                    "param_count": 121953,
+                    "train_time_s": 168.92062950134277,
+                    "evaluated_at": "2026-10-27T12:14:47"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.035325635224580765,
+                    "n_test_ics": 100,
+                    "param_count": 121953,
+                    "train_time_s": 155.65957498550415,
+                    "evaluated_at": "2026-10-27T12:17:27"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.03334568440914154,
+                    "n_test_ics": 100,
+                    "param_count": 121953,
+                    "train_time_s": 158.02657890319824,
+                    "evaluated_at": "2026-10-27T12:20:09"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.02795450948178768,
+                    "n_test_ics": 100,
+                    "param_count": 121953,
+                    "train_time_s": 158.13211822509766,
+                    "evaluated_at": "2026-10-27T12:22:51"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.25025343894958496,
+                    "n_test_ics": 100,
+                    "param_count": 121953,
+                    "train_time_s": 157.4987211227417,
+                    "evaluated_at": "2026-10-27T12:25:32"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/main_200k/allen_cahn/pi_deeponet",
+            "study_name": "pi_deeponet_allen_cahn_200k",
+            "completed_trials": 15,
+            "pruned_trials": 37,
+            "best_trial": 20,
+            "study_sha256": "b648413ef2cf1cb2665f1c0c75268d806bce529b371dc727df0b3abce56c3593",
+            "evaluated_trial": 20,
+            "rule_completed": 15,
+            "gpu_seconds_correction": -257.998
+        },
+        {
+            "cell": "main_200k/allen_cahn",
+            "arch": "pit",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:main_results, tab:train_time, tab:pairwise, tab:results_detail, tab:best_hparams, fig:solution_panels_app, fig:strip_plot, fig:loss, fig:convergence, tab:budget_acc (200k), tab:budget_pairwise (200k), tab:budget_cost (200k)",
+            "eval_dir": "experiments/eval/main_200k/allen_cahn/pit",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.03550316393375397,
+                    "n_test_ics": 100,
+                    "param_count": 102209,
+                    "train_time_s": 588.2036862373352,
+                    "evaluated_at": "2026-05-01T15:23:43"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.028560034930706024,
+                    "n_test_ics": 100,
+                    "param_count": 102209,
+                    "train_time_s": 565.820006608963,
+                    "evaluated_at": "2026-05-01T15:33:14"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.11767809092998505,
+                    "n_test_ics": 100,
+                    "param_count": 102209,
+                    "train_time_s": 574.7372226715088,
+                    "evaluated_at": "2026-05-01T15:42:55"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.03413457050919533,
+                    "n_test_ics": 100,
+                    "param_count": 102209,
+                    "train_time_s": 563.9748528003693,
+                    "evaluated_at": "2026-05-01T15:52:25"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.07007646560668945,
+                    "n_test_ics": 100,
+                    "param_count": 102209,
+                    "train_time_s": 565.8612313270569,
+                    "evaluated_at": "2026-05-01T16:01:56"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/main_200k/allen_cahn/pit",
+            "study_name": "pit_allen_cahn",
+            "completed_trials": 15,
+            "pruned_trials": 20,
+            "best_trial": 26,
+            "study_sha256": "a5d44690381d4196a114d9eb920befbf3fb2f7c2df1eaa6c9a2f84bbe4c9f6b8",
+            "evaluated_trial": 26,
+            "rule_completed": 15
+        },
+        {
+            "cell": "main_200k/allen_cahn",
+            "arch": "pinto",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:main_results, tab:train_time, tab:pairwise, tab:results_detail, tab:best_hparams, fig:solution_panels_app, fig:strip_plot, fig:loss, fig:convergence, tab:budget_acc (200k), tab:budget_pairwise (200k), tab:budget_cost (200k), sec:2d (error by time), fig:ac_error_by_time",
+            "eval_dir": "experiments/eval/main_200k/allen_cahn/pinto",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.01828714646399021,
+                    "n_test_ics": 100,
+                    "param_count": 171841,
+                    "train_time_s": 663.6066782474518,
+                    "evaluated_at": "2026-05-01T14:30:37"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.08702248334884644,
+                    "n_test_ics": 100,
+                    "param_count": 171841,
+                    "train_time_s": 638.6373536586761,
+                    "evaluated_at": "2026-05-01T14:41:21"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.022007007151842117,
+                    "n_test_ics": 100,
+                    "param_count": 171841,
+                    "train_time_s": 638.5617289543152,
+                    "evaluated_at": "2026-05-01T14:52:05"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.022406036034226418,
+                    "n_test_ics": 100,
+                    "param_count": 171841,
+                    "train_time_s": 637.7108461856842,
+                    "evaluated_at": "2026-05-01T15:02:50"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.02410411275923252,
+                    "n_test_ics": 100,
+                    "param_count": 171841,
+                    "train_time_s": 647.3188495635986,
+                    "evaluated_at": "2026-05-01T15:13:46"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/main_200k/allen_cahn/pinto",
+            "study_name": "pinto_allen_cahn",
+            "completed_trials": 15,
+            "pruned_trials": 59,
+            "best_trial": 6,
+            "study_sha256": "09fd950c78730e7784d0641ca0d60821f78a5c1f68fe46afe0d084380102914a",
+            "evaluated_trial": 6,
+            "rule_completed": 15
+        },
+        {
+            "cell": "main_200k/allen_cahn",
+            "arch": "keronet",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:main_results, tab:train_time, tab:pairwise, tab:results_detail, tab:best_hparams, fig:solution_panels_app, fig:strip_plot, fig:loss, fig:convergence, tab:budget_acc (200k), tab:budget_pairwise (200k), tab:budget_cost (200k), tab:ablation, tab:components, fig:s_sweep (selected S), sec:2d (error by time), fig:ac_error_by_time",
+            "eval_dir": "experiments/eval/main_200k/allen_cahn/keronet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.011094946414232254,
+                    "n_test_ics": 100,
+                    "param_count": 191954,
+                    "train_time_s": 321.6614263057709,
+                    "evaluated_at": "2026-05-01T13:50:08"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.013471790589392185,
+                    "n_test_ics": 100,
+                    "param_count": 191954,
+                    "train_time_s": 307.4983968734741,
+                    "evaluated_at": "2026-05-01T13:55:21"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.013669409789144993,
+                    "n_test_ics": 100,
+                    "param_count": 191954,
+                    "train_time_s": 306.74533581733704,
+                    "evaluated_at": "2026-05-01T14:00:33"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.014211773872375488,
+                    "n_test_ics": 100,
+                    "param_count": 191954,
+                    "train_time_s": 306.5442650318146,
+                    "evaluated_at": "2026-05-01T14:05:44"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.013146528974175453,
+                    "n_test_ics": 100,
+                    "param_count": 191954,
+                    "train_time_s": 306.9457721710205,
+                    "evaluated_at": "2026-05-01T14:10:56"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/main_200k/allen_cahn/keronet",
+            "study_name": "keronet_allen_cahn",
+            "completed_trials": 15,
+            "pruned_trials": 22,
+            "best_trial": 33,
+            "study_sha256": "dc36cda460eda41ca07a8b42ab99dfc46e84778ac4f8b62cdf3b0a51a9b68c81",
+            "evaluated_trial": 33,
+            "rule_completed": 15
+        },
+        {
+            "cell": "main_200k/allen_cahn",
+            "arch": "mkeronet",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:ablation, tab:components",
+            "eval_dir": "experiments/eval/main_200k/allen_cahn/mkeronet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.013286756351590157,
+                    "n_test_ics": 100,
+                    "param_count": 170661,
+                    "train_time_s": 194.8670780658722,
+                    "evaluated_at": "2026-07-27T17:23:53"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.013611415401101112,
+                    "n_test_ics": 100,
+                    "param_count": 170661,
+                    "train_time_s": 198.3507571220398,
+                    "evaluated_at": "2026-07-27T17:44:31"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.012665722519159317,
+                    "n_test_ics": 100,
+                    "param_count": 170661,
+                    "train_time_s": 181.4966983795166,
+                    "evaluated_at": "2026-07-27T17:47:36"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.012243557721376419,
+                    "n_test_ics": 100,
+                    "param_count": 170661,
+                    "train_time_s": 180.1455910205841,
+                    "evaluated_at": "2026-07-27T17:50:41"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.017350519075989723,
+                    "n_test_ics": 100,
+                    "param_count": 170661,
+                    "train_time_s": 193.65376234054565,
+                    "evaluated_at": "2026-07-27T18:03:31"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/main_200k/allen_cahn/mkeronet",
+            "study_name": "mkeronet_allen_cahn",
+            "completed_trials": 15,
+            "pruned_trials": 17,
+            "best_trial": 9,
+            "study_sha256": "cf9c9829052a2320a976386684a65f0acad5bcd16edf9ba1a71655db8e39e358",
+            "evaluated_trial": 9,
+            "rule_completed": 15
+        },
+        {
+            "cell": "2d_200k/allen_cahn_2d",
+            "arch": "pi_deeponet",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:main_results, tab:train_time, tab:pairwise, tab:results_detail, tab:best_hparams, tab:budget_acc (200k), tab:budget_pairwise (200k), tab:budget_cost (200k), tab:budget_hpo (200k), fig:solution_panels_2d, fig:strip_plot, fig:loss, fig:convergence, tab:ablation, tab:components",
+            "notes": "Paper's 2D benchmark (allen_cahn_2d, run as allen_cahn_2d_c). Trunk Fourier lift normalizes the query coordinates to [0, 1], as KerONet's does; study rerun from scratch with the cell's original search space and protocol (October 2026). For the current group the convergence rule first holds at 20 non-pruned trials (rule_completed); the study's later trials were run while the group's count was set by a study since replaced, and are not part of the protocol result. Trial #91 shared its GPU with another job and was re-timed alone; gpu_seconds_correction (-124.1 s) applies the difference to the study's GPU-hours.",
+            "eval_dir": "experiments/eval/2d_200k/allen_cahn_2d/pi_deeponet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.15289483964443207,
+                    "n_test_ics": 100,
+                    "param_count": 148737,
+                    "train_time_s": 335.37945318222046,
+                    "evaluated_at": "2026-10-27T13:02:54"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.17078152298927307,
+                    "n_test_ics": 100,
+                    "param_count": 148737,
+                    "train_time_s": 322.1257600784302,
+                    "evaluated_at": "2026-10-27T13:08:50"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.16038112342357635,
+                    "n_test_ics": 100,
+                    "param_count": 148737,
+                    "train_time_s": 323.5611617565155,
+                    "evaluated_at": "2026-10-27T13:14:50"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.16683799028396606,
+                    "n_test_ics": 100,
+                    "param_count": 148737,
+                    "train_time_s": 319.8790180683136,
+                    "evaluated_at": "2026-10-27T13:20:44"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.1449165791273117,
+                    "n_test_ics": 100,
+                    "param_count": 148737,
+                    "train_time_s": 319.9385516643524,
+                    "evaluated_at": "2026-10-27T13:26:38"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/2d_200k/allen_cahn_2d/pi_deeponet",
+            "study_name": "pi_deeponet_allen_cahn_2d_c_200k",
+            "completed_trials": 21,
+            "pruned_trials": 83,
+            "best_trial": 2,
+            "study_sha256": "edb8b3348b7ddd3273f896081af8b030d51bbbc679e5d2c132e80cf0de57a5bd",
+            "evaluated_trial": 2,
+            "rule_completed": 20,
+            "gpu_seconds_correction": -124.108
+        },
+        {
+            "cell": "2d_200k/allen_cahn_2d",
+            "arch": "pit",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:main_results, tab:train_time, tab:pairwise, tab:results_detail, tab:best_hparams, tab:budget_acc (200k), tab:budget_pairwise (200k), tab:budget_cost (200k), tab:budget_hpo (200k), fig:solution_panels_2d, fig:strip_plot, fig:loss, fig:convergence, app:per-pde (error by time)",
+            "notes": "Paper's 2D benchmark (allen_cahn_2d, run as allen_cahn_2d_c: IC amplitude 2.8, periodic boundary supervision), run from scratch (2026-10-23/26); the group {PINTO, PIT, KerONet, PI-DeepONet} reached 21 non-pruned trials, set by the original PI-DeepONet study; with the rerun PI-DeepONet study the convergence rule first holds at 20 (rule_completed), with the same selections.",
+            "eval_dir": "experiments/eval/2d_200k/allen_cahn_2d/pit",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.1531684845685959,
+                    "n_test_ics": 100,
+                    "param_count": 180577,
+                    "train_time_s": 2549.1206743717194,
+                    "evaluated_at": "2026-10-24T07:49:04"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.10852064192295074,
+                    "n_test_ics": 100,
+                    "param_count": 180577,
+                    "train_time_s": 2499.294494152069,
+                    "evaluated_at": "2026-10-24T08:31:49"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.12030062824487686,
+                    "n_test_ics": 100,
+                    "param_count": 180577,
+                    "train_time_s": 2497.94748210907,
+                    "evaluated_at": "2026-10-24T09:14:32"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.11551228165626526,
+                    "n_test_ics": 100,
+                    "param_count": 180577,
+                    "train_time_s": 2498.786724805832,
+                    "evaluated_at": "2026-10-24T09:57:16"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.11004846543073654,
+                    "n_test_ics": 100,
+                    "param_count": 180577,
+                    "train_time_s": 2499.6117177009583,
+                    "evaluated_at": "2026-10-24T10:40:00"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/2d_200k/allen_cahn_2d/pit",
+            "study_name": "pit_allen_cahn_2d_c",
+            "completed_trials": 21,
+            "pruned_trials": 24,
+            "best_trial": 1,
+            "study_sha256": "02a622222cd469dfa9057c78904e53352703b50fc5c239809f8d5461ece0fa9e",
+            "evaluated_trial": 1,
+            "rule_completed": 20
+        },
+        {
+            "cell": "2d_200k/allen_cahn_2d",
+            "arch": "pinto",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:main_results, tab:train_time, tab:pairwise, tab:results_detail, tab:best_hparams, tab:budget_acc (200k), tab:budget_pairwise (200k), tab:budget_cost (200k), tab:budget_hpo (200k), fig:solution_panels_2d, fig:strip_plot, fig:loss, fig:convergence, sec:2d (error by time), fig:ac_error_by_time, app:per-pde (error by time)",
+            "notes": "Paper's 2D benchmark (allen_cahn_2d, run as allen_cahn_2d_c: IC amplitude 2.8, periodic boundary supervision), run from scratch (2026-10-23/26); the group {PINTO, PIT, KerONet, PI-DeepONet} reached 21 non-pruned trials, set by the original PI-DeepONet study; with the rerun PI-DeepONet study the convergence rule first holds at 20 (rule_completed), with the same selections.",
+            "eval_dir": "experiments/eval/2d_200k/allen_cahn_2d/pinto",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.06459743529558182,
+                    "n_test_ics": 100,
+                    "param_count": 148353,
+                    "train_time_s": 2608.666271209717,
+                    "evaluated_at": "2026-10-24T07:50:08"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.06637545675039291,
+                    "n_test_ics": 100,
+                    "param_count": 148353,
+                    "train_time_s": 2564.638715982437,
+                    "evaluated_at": "2026-10-24T08:34:02"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.06423632800579071,
+                    "n_test_ics": 100,
+                    "param_count": 148353,
+                    "train_time_s": 2563.2499556541443,
+                    "evaluated_at": "2026-10-24T09:17:54"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.059767480939626694,
+                    "n_test_ics": 100,
+                    "param_count": 148353,
+                    "train_time_s": 2564.0238649845123,
+                    "evaluated_at": "2026-10-24T10:01:47"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.06032818928360939,
+                    "n_test_ics": 100,
+                    "param_count": 148353,
+                    "train_time_s": 2565.114189386368,
+                    "evaluated_at": "2026-10-24T10:45:41"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/2d_200k/allen_cahn_2d/pinto",
+            "study_name": "pinto_allen_cahn_2d_c",
+            "completed_trials": 21,
+            "pruned_trials": 24,
+            "best_trial": 16,
+            "study_sha256": "ff9d50d729e2c80acb8da987958b271c1b24abcf0edd24349cd0676cd97f064f",
+            "evaluated_trial": 16,
+            "rule_completed": 20
+        },
+        {
+            "cell": "2d_200k/allen_cahn_2d",
+            "arch": "keronet",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:main_results, tab:train_time, tab:pairwise, tab:results_detail, tab:best_hparams, tab:budget_acc (200k), tab:budget_pairwise (200k), tab:budget_cost (200k), tab:budget_hpo (200k), fig:solution_panels_2d, fig:strip_plot, fig:loss, fig:convergence, tab:ablation, tab:components, sec:2d (error by time), fig:ac_error_by_time, app:per-pde (error by time)",
+            "notes": "Paper's 2D benchmark (allen_cahn_2d, run as allen_cahn_2d_c: IC amplitude 2.8, periodic boundary supervision), run from scratch (2026-10-23/26); the group {PINTO, PIT, KerONet, PI-DeepONet} reached 21 non-pruned trials, set by the original PI-DeepONet study; with the rerun PI-DeepONet study the convergence rule first holds at 20 (rule_completed), with the same selections.",
+            "eval_dir": "experiments/eval/2d_200k/allen_cahn_2d/keronet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.06317125260829926,
+                    "n_test_ics": 100,
+                    "param_count": 195858,
+                    "train_time_s": 505.6334476470947,
+                    "evaluated_at": "2026-10-24T10:49:24"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.06441469490528107,
+                    "n_test_ics": 100,
+                    "param_count": 195858,
+                    "train_time_s": 487.25335001945496,
+                    "evaluated_at": "2026-10-24T10:58:05"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.0629042312502861,
+                    "n_test_ics": 100,
+                    "param_count": 195858,
+                    "train_time_s": 487.9373803138733,
+                    "evaluated_at": "2026-10-24T11:06:46"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.06552527844905853,
+                    "n_test_ics": 100,
+                    "param_count": 195858,
+                    "train_time_s": 487.18601536750793,
+                    "evaluated_at": "2026-10-24T11:15:27"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.06460646539926529,
+                    "n_test_ics": 100,
+                    "param_count": 195858,
+                    "train_time_s": 487.59320425987244,
+                    "evaluated_at": "2026-10-24T11:24:09"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/2d_200k/allen_cahn_2d/keronet",
+            "study_name": "keronet_allen_cahn_2d_c",
+            "completed_trials": 21,
+            "pruned_trials": 32,
+            "best_trial": 35,
+            "study_sha256": "b5f3e9125fc195ba82b18240e58e6c62dbfdc3916970de4ccf86608d6376b7ef",
+            "evaluated_trial": 35,
+            "rule_completed": 20
+        },
+        {
+            "cell": "2d_200k/allen_cahn_2d",
+            "arch": "mkeronet",
+            "space": "200k",
+            "status": "reported",
+            "paper": "tab:ablation, tab:components",
+            "notes": "Paper's 2D benchmark (allen_cahn_2d, run as allen_cahn_2d_c: IC amplitude 2.8, periodic boundary supervision), run from scratch (2026-10-23/26); studied on its own and matched to the main group's trial count (20 under the convergence rule with the rerun PI-DeepONet study); the rule holds for mKerONet at 21.",
+            "eval_dir": "experiments/eval/2d_200k/allen_cahn_2d/mkeronet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.0679236575961113,
+                    "n_test_ics": 100,
+                    "param_count": 165089,
+                    "train_time_s": 397.5425271987915,
+                    "evaluated_at": "2026-10-24T11:24:04"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.07002603262662888,
+                    "n_test_ics": 100,
+                    "param_count": 165089,
+                    "train_time_s": 383.7152121067047,
+                    "evaluated_at": "2026-10-24T11:31:00"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.0750386118888855,
+                    "n_test_ics": 100,
+                    "param_count": 165089,
+                    "train_time_s": 383.4341359138489,
+                    "evaluated_at": "2026-10-24T11:37:56"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.07157868146896362,
+                    "n_test_ics": 100,
+                    "param_count": 165089,
+                    "train_time_s": 383.7017409801483,
+                    "evaluated_at": "2026-10-24T11:44:52"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.06911501288414001,
+                    "n_test_ics": 100,
+                    "param_count": 165089,
+                    "train_time_s": 383.4425678253174,
+                    "evaluated_at": "2026-10-24T11:51:48"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/2d_200k/allen_cahn_2d/mkeronet",
+            "study_name": "mkeronet_allen_cahn_2d_c",
+            "completed_trials": 21,
+            "pruned_trials": 24,
+            "best_trial": 42,
+            "study_sha256": "1fe258b73528f3183fe6daece789091515c3461d1fb4ca54d19366bb8ae7fa06",
+            "evaluated_trial": 42,
+            "rule_completed": 21
+        },
+        {
+            "cell": "budget_100k/burgers",
+            "arch": "pi_deeponet",
+            "space": "100k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo, tab:components",
+            "notes": "Trunk Fourier lift normalizes the query coordinates to [0, 1], as KerONet's does; study rerun from scratch with the cell's original search space and protocol (October 2026). It needed more trials than its group, which was then extended together under the convergence rule.",
+            "eval_dir": "experiments/eval/budget_100k/burgers/pi_deeponet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.1942553073167801,
+                    "n_test_ics": 100,
+                    "param_count": 51393,
+                    "train_time_s": 134.7988519668579,
+                    "evaluated_at": "2026-10-27T16:53:09"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.22689484059810638,
+                    "n_test_ics": 100,
+                    "param_count": 51393,
+                    "train_time_s": 123.97959733009338,
+                    "evaluated_at": "2026-10-27T16:55:17"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.20428466796875,
+                    "n_test_ics": 100,
+                    "param_count": 51393,
+                    "train_time_s": 124.13954710960388,
+                    "evaluated_at": "2026-10-27T16:57:25"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.18704937398433685,
+                    "n_test_ics": 100,
+                    "param_count": 51393,
+                    "train_time_s": 123.752676486969,
+                    "evaluated_at": "2026-10-27T16:59:33"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.20227178931236267,
+                    "n_test_ics": 100,
+                    "param_count": 51393,
+                    "train_time_s": 123.49620509147644,
+                    "evaluated_at": "2026-10-27T17:01:41"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_100k/burgers/pi_deeponet",
+            "study_name": "pi_deeponet_burgers_100k",
+            "completed_trials": 22,
+            "pruned_trials": 23,
+            "best_trial": 35,
+            "study_sha256": "2d0e7eb9e97417ee32e0c3636eb3f53b2f211579cbb62d5387c9dac50b758d16",
+            "evaluated_trial": 35,
+            "rule_completed": 22
+        },
+        {
+            "cell": "budget_100k/burgers",
+            "arch": "pit",
+            "space": "100k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo",
+            "eval_dir": "experiments/eval/budget_100k/burgers/pit",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.07076142728328705,
+                    "n_test_ics": 100,
+                    "param_count": 96433,
+                    "train_time_s": 745.1564090251923,
+                    "evaluated_at": "2026-10-28T02:53:45"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.07368948310613632,
+                    "n_test_ics": 100,
+                    "param_count": 96433,
+                    "train_time_s": 727.572744846344,
+                    "evaluated_at": "2026-10-28T03:05:58"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.04945177212357521,
+                    "n_test_ics": 100,
+                    "param_count": 96433,
+                    "train_time_s": 720.4254558086395,
+                    "evaluated_at": "2026-10-28T03:18:04"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.05941254273056984,
+                    "n_test_ics": 100,
+                    "param_count": 96433,
+                    "train_time_s": 718.4960584640503,
+                    "evaluated_at": "2026-10-28T03:30:09"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.10431990027427673,
+                    "n_test_ics": 100,
+                    "param_count": 96433,
+                    "train_time_s": 718.1900134086609,
+                    "evaluated_at": "2026-10-28T03:42:13"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_100k/burgers/pit",
+            "study_name": "pit_burgers",
+            "completed_trials": 22,
+            "pruned_trials": 52,
+            "best_trial": 53,
+            "study_sha256": "f7384c8a8e3819cafdbe46d318909d09c94f7013da4cb2feb5aa3862eb4d0f9e",
+            "evaluated_trial": 53,
+            "notes": "Extended 15 -> 22 non-pruned trials under the convergence rule with the rerun PI-DeepONet study (October 2026); the first trials are the original study, unchanged. New selection #53, re-evaluated (2026-10-28).",
+            "rule_completed": 22
+        },
+        {
+            "cell": "budget_100k/burgers",
+            "arch": "pinto",
+            "space": "100k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo",
+            "eval_dir": "experiments/eval/budget_100k/burgers/pinto",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.06419238448143005,
+                    "n_test_ics": 100,
+                    "param_count": 68641,
+                    "train_time_s": 573.2854080200195,
+                    "evaluated_at": "2026-07-26T23:48:06"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.11202274262905121,
+                    "n_test_ics": 100,
+                    "param_count": 68641,
+                    "train_time_s": 547.6541528701782,
+                    "evaluated_at": "2026-07-26T23:57:19"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.0819781944155693,
+                    "n_test_ics": 100,
+                    "param_count": 68641,
+                    "train_time_s": 547.4738907814026,
+                    "evaluated_at": "2026-07-27T00:06:31"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.076821468770504,
+                    "n_test_ics": 100,
+                    "param_count": 68641,
+                    "train_time_s": 547.9461643695831,
+                    "evaluated_at": "2026-07-27T00:15:44"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.11688321828842163,
+                    "n_test_ics": 100,
+                    "param_count": 68641,
+                    "train_time_s": 546.2394361495972,
+                    "evaluated_at": "2026-07-27T00:24:55"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_100k/burgers/pinto",
+            "study_name": "pinto_burgers",
+            "completed_trials": 22,
+            "pruned_trials": 49,
+            "best_trial": 62,
+            "study_sha256": "0e0035175745eece75eb5c4abf3ca7d7d82b1f7eb83a339293ee6d036daaf148",
+            "evaluated_trial": 21,
+            "notes": "Extended 15 -> 22 non-pruned trials under the convergence rule with the rerun PI-DeepONet study (October 2026); the first trials are the original study, unchanged. Its best trial #62 has the same hyperparameters as the evaluated #21.",
+            "rule_completed": 22
+        },
+        {
+            "cell": "budget_100k/burgers",
+            "arch": "keronet",
+            "space": "100k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo, tab:components",
+            "eval_dir": "experiments/eval/budget_100k/burgers/keronet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.02651868760585785,
+                    "n_test_ics": 100,
+                    "param_count": 84834,
+                    "train_time_s": 187.63320422172546,
+                    "evaluated_at": "2026-07-26T23:26:26"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.03570270165801048,
+                    "n_test_ics": 100,
+                    "param_count": 84834,
+                    "train_time_s": 173.4031171798706,
+                    "evaluated_at": "2026-07-26T23:29:24"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.041499752551317215,
+                    "n_test_ics": 100,
+                    "param_count": 84834,
+                    "train_time_s": 182.33427834510803,
+                    "evaluated_at": "2026-07-26T23:32:31"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.03868691250681877,
+                    "n_test_ics": 100,
+                    "param_count": 84834,
+                    "train_time_s": 172.92536807060242,
+                    "evaluated_at": "2026-07-26T23:35:28"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.035275448113679886,
+                    "n_test_ics": 100,
+                    "param_count": 84834,
+                    "train_time_s": 173.83689975738525,
+                    "evaluated_at": "2026-07-26T23:38:26"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_100k/burgers/keronet",
+            "study_name": "keronet_burgers",
+            "completed_trials": 22,
+            "pruned_trials": 62,
+            "best_trial": 45,
+            "study_sha256": "360c712e88e4241d8eae626065d43595ddcb36c368dc284ec4f6ce880b8877f6",
+            "evaluated_trial": 45,
+            "notes": "Extended 15 -> 22 non-pruned trials under the convergence rule with the rerun PI-DeepONet study (October 2026); the first trials are the original study, unchanged. Selection unchanged.",
+            "rule_completed": 22
+        },
+        {
+            "cell": "budget_100k/allen_cahn",
+            "arch": "pi_deeponet",
+            "space": "100k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo, tab:components",
+            "notes": "Trunk Fourier lift normalizes the query coordinates to [0, 1], as KerONet's does; study rerun from scratch with the cell's original search space and protocol (October 2026).",
+            "eval_dir": "experiments/eval/budget_100k/allen_cahn/pi_deeponet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.0248519666492939,
+                    "n_test_ics": 100,
+                    "param_count": 88513,
+                    "train_time_s": 109.73227906227112,
+                    "evaluated_at": "2026-10-27T17:17:26"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.02902522124350071,
+                    "n_test_ics": 100,
+                    "param_count": 88513,
+                    "train_time_s": 97.98526191711426,
+                    "evaluated_at": "2026-10-27T17:19:07"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.029942026361823082,
+                    "n_test_ics": 100,
+                    "param_count": 88513,
+                    "train_time_s": 98.70859599113464,
+                    "evaluated_at": "2026-10-27T17:20:49"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.03020809218287468,
+                    "n_test_ics": 100,
+                    "param_count": 88513,
+                    "train_time_s": 98.24464178085327,
+                    "evaluated_at": "2026-10-27T17:22:31"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.039993129670619965,
+                    "n_test_ics": 100,
+                    "param_count": 88513,
+                    "train_time_s": 98.47943019866943,
+                    "evaluated_at": "2026-10-27T17:24:13"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_100k/allen_cahn/pi_deeponet",
+            "study_name": "pi_deeponet_allen_cahn_100k",
+            "completed_trials": 17,
+            "pruned_trials": 26,
+            "best_trial": 33,
+            "study_sha256": "111f95fd00dc5295abadb23c39c2a676e4f7da88d2d1e3acf889fa5d875ab7a1",
+            "evaluated_trial": 33,
+            "rule_completed": 17
+        },
+        {
+            "cell": "budget_100k/allen_cahn",
+            "arch": "pit",
+            "space": "100k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo",
+            "eval_dir": "experiments/eval/budget_100k/allen_cahn/pit",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.0402335450053215,
+                    "n_test_ics": 100,
+                    "param_count": 57697,
+                    "train_time_s": 461.8231990337372,
+                    "evaluated_at": "2026-07-29T22:58:44"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.06960319727659225,
+                    "n_test_ics": 100,
+                    "param_count": 57697,
+                    "train_time_s": 432.3857259750366,
+                    "evaluated_at": "2026-07-29T23:06:02"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.05536292865872383,
+                    "n_test_ics": 100,
+                    "param_count": 57697,
+                    "train_time_s": 433.0892422199249,
+                    "evaluated_at": "2026-07-29T23:13:20"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.117406465113163,
+                    "n_test_ics": 100,
+                    "param_count": 57697,
+                    "train_time_s": 432.2053782939911,
+                    "evaluated_at": "2026-07-29T23:20:38"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.0507926270365715,
+                    "n_test_ics": 100,
+                    "param_count": 57697,
+                    "train_time_s": 432.358332157135,
+                    "evaluated_at": "2026-07-29T23:27:56"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_100k/allen_cahn/pit",
+            "study_name": "pit_allen_cahn",
+            "completed_trials": 17,
+            "pruned_trials": 8,
+            "best_trial": 22,
+            "study_sha256": "3e71001572ddb2a9475358cb6f91a399941aff13c0e37be3a861a82c51dafeed",
+            "evaluated_trial": 22,
+            "rule_completed": 17
+        },
+        {
+            "cell": "budget_100k/allen_cahn",
+            "arch": "pinto",
+            "space": "100k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo",
+            "eval_dir": "experiments/eval/budget_100k/allen_cahn/pinto",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.02867571823298931,
+                    "n_test_ics": 100,
+                    "param_count": 81121,
+                    "train_time_s": 485.37218022346497,
+                    "evaluated_at": "2026-07-29T23:01:54"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.047350674867630005,
+                    "n_test_ics": 100,
+                    "param_count": 81121,
+                    "train_time_s": 460.92557764053345,
+                    "evaluated_at": "2026-07-29T23:09:40"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.08896927535533905,
+                    "n_test_ics": 100,
+                    "param_count": 81121,
+                    "train_time_s": 460.7033517360687,
+                    "evaluated_at": "2026-07-29T23:17:26"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.023626847192645073,
+                    "n_test_ics": 100,
+                    "param_count": 81121,
+                    "train_time_s": 461.20385909080505,
+                    "evaluated_at": "2026-07-29T23:25:13"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.04265041649341583,
+                    "n_test_ics": 100,
+                    "param_count": 81121,
+                    "train_time_s": 463.9457256793976,
+                    "evaluated_at": "2026-07-29T23:33:02"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_100k/allen_cahn/pinto",
+            "study_name": "pinto_allen_cahn",
+            "completed_trials": 17,
+            "pruned_trials": 36,
+            "best_trial": 44,
+            "study_sha256": "316af205499440bed3c6b9e742e1593b482d4b6004d1a4722e01ae752d23b318",
+            "evaluated_trial": 44,
+            "rule_completed": 17
+        },
+        {
+            "cell": "budget_100k/allen_cahn",
+            "arch": "keronet",
+            "space": "100k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo, tab:components",
+            "eval_dir": "experiments/eval/budget_100k/allen_cahn/keronet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.015066278167068958,
+                    "n_test_ics": 100,
+                    "param_count": 91290,
+                    "train_time_s": 188.73614716529846,
+                    "evaluated_at": "2026-07-29T23:36:18"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.014106192626059055,
+                    "n_test_ics": 100,
+                    "param_count": 91290,
+                    "train_time_s": 173.00678300857544,
+                    "evaluated_at": "2026-07-29T23:39:15"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.015656499192118645,
+                    "n_test_ics": 100,
+                    "param_count": 91290,
+                    "train_time_s": 171.8088002204895,
+                    "evaluated_at": "2026-07-29T23:42:12"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.014918569475412369,
+                    "n_test_ics": 100,
+                    "param_count": 91290,
+                    "train_time_s": 172.13194799423218,
+                    "evaluated_at": "2026-07-29T23:45:09"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.015567396767437458,
+                    "n_test_ics": 100,
+                    "param_count": 91290,
+                    "train_time_s": 171.99489998817444,
+                    "evaluated_at": "2026-07-29T23:48:06"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_100k/allen_cahn/keronet",
+            "study_name": "keronet_allen_cahn",
+            "completed_trials": 17,
+            "pruned_trials": 35,
+            "best_trial": 43,
+            "study_sha256": "2dccab30579a8883c1105f7572410ffaf79605f9fc530afe9d39fceb1e9a1c16",
+            "evaluated_trial": 43,
+            "rule_completed": 17
+        },
+        {
+            "cell": "budget_300k/burgers",
+            "arch": "pi_deeponet",
+            "space": "300k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo, tab:components",
+            "notes": "Trunk Fourier lift normalizes the query coordinates to [0, 1], as KerONet's does; study rerun from scratch with the cell's original search space and protocol (October 2026). For the current group the convergence rule first holds at 19 non-pruned trials (rule_completed); the study's later trials were run while the group's count was set by a study since replaced, and are not part of the protocol result.",
+            "eval_dir": "experiments/eval/budget_300k/burgers/pi_deeponet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.2648806571960449,
+                    "n_test_ics": 100,
+                    "param_count": 231105,
+                    "train_time_s": 251.54107928276062,
+                    "evaluated_at": "2026-10-27T18:42:01"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.2373836189508438,
+                    "n_test_ics": 100,
+                    "param_count": 231105,
+                    "train_time_s": 234.31758284568787,
+                    "evaluated_at": "2026-10-27T18:46:00"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.27079877257347107,
+                    "n_test_ics": 100,
+                    "param_count": 231105,
+                    "train_time_s": 244.35524821281433,
+                    "evaluated_at": "2026-10-27T18:50:09"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.4061853289604187,
+                    "n_test_ics": 100,
+                    "param_count": 231105,
+                    "train_time_s": 233.52782678604126,
+                    "evaluated_at": "2026-10-27T18:54:07"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.3075813055038452,
+                    "n_test_ics": 100,
+                    "param_count": 231105,
+                    "train_time_s": 235.0649929046631,
+                    "evaluated_at": "2026-10-27T18:58:06"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_300k/burgers/pi_deeponet",
+            "study_name": "pi_deeponet_burgers_300k",
+            "completed_trials": 20,
+            "pruned_trials": 37,
+            "best_trial": 16,
+            "study_sha256": "ba3bff8595a5c485e3d71e49cf8f163e3264d7d7108f2ad1971f32f405d577cc",
+            "evaluated_trial": 16,
+            "rule_completed": 19
+        },
+        {
+            "cell": "budget_300k/burgers",
+            "arch": "pit",
+            "space": "300k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo",
+            "eval_dir": "experiments/eval/budget_300k/burgers/pit",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.05704735219478607,
+                    "n_test_ics": 100,
+                    "param_count": 219137,
+                    "train_time_s": 651.9781301021576,
+                    "evaluated_at": "2026-07-26T15:55:03"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.1335330754518509,
+                    "n_test_ics": 100,
+                    "param_count": 219137,
+                    "train_time_s": 618.5114393234253,
+                    "evaluated_at": "2026-07-26T16:05:28"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.0876481831073761,
+                    "n_test_ics": 100,
+                    "param_count": 219137,
+                    "train_time_s": 616.880930185318,
+                    "evaluated_at": "2026-07-26T16:15:53"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.08129757642745972,
+                    "n_test_ics": 100,
+                    "param_count": 219137,
+                    "train_time_s": 615.084730386734,
+                    "evaluated_at": "2026-07-26T16:26:14"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.09209396690130234,
+                    "n_test_ics": 100,
+                    "param_count": 219137,
+                    "train_time_s": 617.9158525466919,
+                    "evaluated_at": "2026-07-26T16:36:38"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_300k/burgers/pit",
+            "study_name": "pit_burgers",
+            "completed_trials": 20,
+            "pruned_trials": 52,
+            "best_trial": 10,
+            "study_sha256": "b7101f7596be016b7047e0018d1f5c54d3b517b7d93119098d875b3d6c808a08",
+            "evaluated_trial": 10,
+            "rule_completed": 19,
+            "notes": "For the current group the convergence rule first holds at 19 non-pruned trials (rule_completed); the study's later trials were run while the group's count was set by a study since replaced, and are not part of the protocol result."
+        },
+        {
+            "cell": "budget_300k/burgers",
+            "arch": "pinto",
+            "space": "300k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo",
+            "notes": "Extended to 20; identical hyperparameters re-selected. For the current group the convergence rule first holds at 19 non-pruned trials (rule_completed); the study's later trials were run while the group's count was set by a study since replaced, and are not part of the protocol result.",
+            "eval_dir": "experiments/eval/budget_300k/burgers/pinto",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.038664571940898895,
+                    "n_test_ics": 100,
+                    "param_count": 280801,
+                    "train_time_s": 1397.25710272789,
+                    "evaluated_at": "2026-07-26T13:46:56"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.07996927946805954,
+                    "n_test_ics": 100,
+                    "param_count": 280801,
+                    "train_time_s": 1405.6581604480743,
+                    "evaluated_at": "2026-07-26T14:16:35"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.057417526841163635,
+                    "n_test_ics": 100,
+                    "param_count": 280801,
+                    "train_time_s": 1403.3798198699951,
+                    "evaluated_at": "2026-07-26T14:56:17"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.07555204629898071,
+                    "n_test_ics": 100,
+                    "param_count": 280801,
+                    "train_time_s": 1369.098797082901,
+                    "evaluated_at": "2026-07-26T15:19:13"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.07982280105352402,
+                    "n_test_ics": 100,
+                    "param_count": 280801,
+                    "train_time_s": 1376.7392828464508,
+                    "evaluated_at": "2026-07-26T15:42:17"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_300k/burgers/pinto",
+            "study_name": "pinto_burgers",
+            "completed_trials": 20,
+            "pruned_trials": 68,
+            "best_trial": 74,
+            "study_sha256": "547ac38fa7155fcb08dfc9b494885df3de88854228bc9253ca6918a66770b1d0",
+            "evaluated_trial": 67,
+            "rule_completed": 19
+        },
+        {
+            "cell": "budget_300k/burgers",
+            "arch": "keronet",
+            "space": "300k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo, tab:components",
+            "notes": "Rerun from scratch (original study did not reproduce under the documented code state). For the current group the convergence rule first holds at 19 non-pruned trials (rule_completed); the study's later trials were run while the group's count was set by a study since replaced, and are not part of the protocol result.",
+            "eval_dir": "experiments/eval/budget_300k/burgers/keronet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.022163640707731247,
+                    "n_test_ics": 100,
+                    "param_count": 228022,
+                    "train_time_s": 290.8050079345703,
+                    "evaluated_at": "2026-10-20T10:31:12"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.03463151305913925,
+                    "n_test_ics": 100,
+                    "param_count": 228022,
+                    "train_time_s": 265.7586736679077,
+                    "evaluated_at": "2026-10-20T10:35:43"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.02056654915213585,
+                    "n_test_ics": 100,
+                    "param_count": 228022,
+                    "train_time_s": 264.7582428455353,
+                    "evaluated_at": "2026-10-20T10:40:13"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.025594836100935936,
+                    "n_test_ics": 100,
+                    "param_count": 228022,
+                    "train_time_s": 265.2097783088684,
+                    "evaluated_at": "2026-10-20T10:44:44"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.018771309405565262,
+                    "n_test_ics": 100,
+                    "param_count": 228022,
+                    "train_time_s": 265.0047233104706,
+                    "evaluated_at": "2026-10-20T10:49:14"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_300k/burgers/keronet",
+            "study_name": "keronet_burgers",
+            "completed_trials": 20,
+            "pruned_trials": 63,
+            "best_trial": 61,
+            "study_sha256": "295f203bc16a0324cba94caeceef23548c0d3d73e80ca6c0e3b9ea5e6354a333",
+            "evaluated_trial": 61,
+            "rule_completed": 19
+        },
+        {
+            "cell": "budget_300k/allen_cahn",
+            "arch": "pi_deeponet",
+            "space": "300k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo, tab:components",
+            "notes": "Trunk Fourier lift normalizes the query coordinates to [0, 1], as KerONet's does; study rerun from scratch with the cell's original search space and protocol (October 2026).",
+            "eval_dir": "experiments/eval/budget_300k/allen_cahn/pi_deeponet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.030647777020931244,
+                    "n_test_ics": 100,
+                    "param_count": 189633,
+                    "train_time_s": 211.76723647117615,
+                    "evaluated_at": "2026-10-27T18:18:54"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.03329376503825188,
+                    "n_test_ics": 100,
+                    "param_count": 189633,
+                    "train_time_s": 195.37839102745056,
+                    "evaluated_at": "2026-10-27T18:22:14"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.040273942053318024,
+                    "n_test_ics": 100,
+                    "param_count": 189633,
+                    "train_time_s": 199.25645065307617,
+                    "evaluated_at": "2026-10-27T18:25:38"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.06529085338115692,
+                    "n_test_ics": 100,
+                    "param_count": 189633,
+                    "train_time_s": 198.36327958106995,
+                    "evaluated_at": "2026-10-27T18:29:01"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.2807175815105438,
+                    "n_test_ics": 100,
+                    "param_count": 189633,
+                    "train_time_s": 198.42849707603455,
+                    "evaluated_at": "2026-10-27T18:32:24"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_300k/allen_cahn/pi_deeponet",
+            "study_name": "pi_deeponet_allen_cahn_300k",
+            "completed_trials": 16,
+            "pruned_trials": 24,
+            "best_trial": 17,
+            "study_sha256": "0e293cc77885bcb18ddd4a47451f153e9bfc8aca5228575fbe18be8f4a182c1d",
+            "evaluated_trial": 17,
+            "rule_completed": 16
+        },
+        {
+            "cell": "budget_300k/allen_cahn",
+            "arch": "pit",
+            "space": "300k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo",
+            "eval_dir": "experiments/eval/budget_300k/allen_cahn/pit",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.01828071102499962,
+                    "n_test_ics": 100,
+                    "param_count": 126193,
+                    "train_time_s": 522.7637178897858,
+                    "evaluated_at": "2026-07-29T18:43:07"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.06074436008930206,
+                    "n_test_ics": 100,
+                    "param_count": 126193,
+                    "train_time_s": 491.992876291275,
+                    "evaluated_at": "2026-07-29T18:51:24"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.13540184497833252,
+                    "n_test_ics": 100,
+                    "param_count": 126193,
+                    "train_time_s": 490.060622215271,
+                    "evaluated_at": "2026-07-29T18:59:40"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.08164124190807343,
+                    "n_test_ics": 100,
+                    "param_count": 126193,
+                    "train_time_s": 490.9202518463135,
+                    "evaluated_at": "2026-07-29T19:07:57"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.04671191796660423,
+                    "n_test_ics": 100,
+                    "param_count": 126193,
+                    "train_time_s": 486.76242423057556,
+                    "evaluated_at": "2026-07-29T19:16:10"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_300k/allen_cahn/pit",
+            "study_name": "pit_allen_cahn",
+            "completed_trials": 16,
+            "pruned_trials": 10,
+            "best_trial": 7,
+            "study_sha256": "a4341890cf7ad8fbea7718e78dd6acbf49120884327f43afacbd57fe6b640f26",
+            "evaluated_trial": 7,
+            "rule_completed": 16
+        },
+        {
+            "cell": "budget_300k/allen_cahn",
+            "arch": "pinto",
+            "space": "300k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo",
+            "eval_dir": "experiments/eval/budget_300k/allen_cahn/pinto",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.020202817395329475,
+                    "n_test_ics": 100,
+                    "param_count": 270449,
+                    "train_time_s": 812.4503812789917,
+                    "evaluated_at": "2026-07-29T17:31:22"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.0697905495762825,
+                    "n_test_ics": 100,
+                    "param_count": 270449,
+                    "train_time_s": 775.6860733032227,
+                    "evaluated_at": "2026-07-29T17:44:23"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.01979772374033928,
+                    "n_test_ics": 100,
+                    "param_count": 270449,
+                    "train_time_s": 776.2655954360962,
+                    "evaluated_at": "2026-07-29T17:57:26"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.0685233324766159,
+                    "n_test_ics": 100,
+                    "param_count": 270449,
+                    "train_time_s": 775.8123128414154,
+                    "evaluated_at": "2026-07-29T18:10:27"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.023219646885991096,
+                    "n_test_ics": 100,
+                    "param_count": 270449,
+                    "train_time_s": 776.2979683876038,
+                    "evaluated_at": "2026-07-29T18:23:29"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_300k/allen_cahn/pinto",
+            "study_name": "pinto_allen_cahn",
+            "completed_trials": 16,
+            "pruned_trials": 33,
+            "best_trial": 35,
+            "study_sha256": "f7530371bd57650195a22d4baeda9e51c05fd2c53c2fd070dda6866be51bc036",
+            "evaluated_trial": 35,
+            "rule_completed": 16
+        },
+        {
+            "cell": "budget_300k/allen_cahn",
+            "arch": "keronet",
+            "space": "300k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo, tab:components",
+            "notes": "Re-evaluated on the shared 100-function test set.",
+            "eval_dir": "experiments/eval/budget_300k/allen_cahn/keronet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.008480207063257694,
+                    "n_test_ics": 100,
+                    "param_count": 194922,
+                    "train_time_s": 298.61585569381714,
+                    "evaluated_at": "2026-10-20T10:54:50"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.011543061584234238,
+                    "n_test_ics": 100,
+                    "param_count": 194922,
+                    "train_time_s": 274.33731150627136,
+                    "evaluated_at": "2026-10-20T10:59:29"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.01485096849501133,
+                    "n_test_ics": 100,
+                    "param_count": 194922,
+                    "train_time_s": 273.63054609298706,
+                    "evaluated_at": "2026-10-20T11:04:08"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.016379741951823235,
+                    "n_test_ics": 100,
+                    "param_count": 194922,
+                    "train_time_s": 273.0318989753723,
+                    "evaluated_at": "2026-10-20T11:08:46"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.010708367452025414,
+                    "n_test_ics": 100,
+                    "param_count": 194922,
+                    "train_time_s": 273.0599889755249,
+                    "evaluated_at": "2026-10-20T11:13:24"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_300k/allen_cahn/keronet",
+            "study_name": "keronet_allen_cahn",
+            "completed_trials": 16,
+            "pruned_trials": 33,
+            "best_trial": 16,
+            "study_sha256": "94cdd0719cb846930a80381a997e7707c0767856cc0b080a14b350ae7aaae2f0",
+            "evaluated_trial": 16,
+            "rule_completed": 16
+        },
+        {
+            "cell": "budget_500k/burgers",
+            "arch": "pi_deeponet",
+            "space": "500k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo, tab:components",
+            "notes": "Trunk Fourier lift normalizes the query coordinates to [0, 1], as KerONet's does; study rerun from scratch with the cell's original search space and protocol (October 2026). For the current group the convergence rule first holds at 15 non-pruned trials (rule_completed); the study's later trials were run while the group's count was set by a study since replaced, and are not part of the protocol result.",
+            "eval_dir": "experiments/eval/budget_500k/burgers/pi_deeponet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.2204839587211609,
+                    "n_test_ics": 100,
+                    "param_count": 484993,
+                    "train_time_s": 159.58606386184692,
+                    "evaluated_at": "2026-10-27T20:33:41"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.22097903490066528,
+                    "n_test_ics": 100,
+                    "param_count": 484993,
+                    "train_time_s": 147.5796947479248,
+                    "evaluated_at": "2026-10-27T20:36:12"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.21844905614852905,
+                    "n_test_ics": 100,
+                    "param_count": 484993,
+                    "train_time_s": 145.66039633750916,
+                    "evaluated_at": "2026-10-27T20:38:41"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.253725528717041,
+                    "n_test_ics": 100,
+                    "param_count": 484993,
+                    "train_time_s": 146.6164677143097,
+                    "evaluated_at": "2026-10-27T20:41:12"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.2520023584365845,
+                    "n_test_ics": 100,
+                    "param_count": 484993,
+                    "train_time_s": 146.15169644355774,
+                    "evaluated_at": "2026-10-27T20:43:42"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_500k/burgers/pi_deeponet",
+            "study_name": "pi_deeponet_burgers_500k",
+            "completed_trials": 20,
+            "pruned_trials": 73,
+            "best_trial": 10,
+            "study_sha256": "6a4437494d4f272a3cb473458cc8e105b74c7a5d566214c417b531229eb72bf1",
+            "evaluated_trial": 10,
+            "rule_completed": 15
+        },
+        {
+            "cell": "budget_500k/burgers",
+            "arch": "pit",
+            "space": "500k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo",
+            "notes": "For the current group the convergence rule first holds at 15 non-pruned trials (rule_completed); the study's later trials were run while the group's count was set by a study since replaced, and are not part of the protocol result.",
+            "eval_dir": "experiments/eval/budget_500k/burgers/pit",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.03740129619836807,
+                    "n_test_ics": 100,
+                    "param_count": 395921,
+                    "train_time_s": 1260.5496308803558,
+                    "evaluated_at": "2026-10-22T06:42:36"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.09888529032468796,
+                    "n_test_ics": 100,
+                    "param_count": 395921,
+                    "train_time_s": 1204.5898158550262,
+                    "evaluated_at": "2026-10-22T07:02:47"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.06327078491449356,
+                    "n_test_ics": 100,
+                    "param_count": 395921,
+                    "train_time_s": 1202.6008117198944,
+                    "evaluated_at": "2026-10-22T07:22:57"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.06976158916950226,
+                    "n_test_ics": 100,
+                    "param_count": 395921,
+                    "train_time_s": 1203.5989322662354,
+                    "evaluated_at": "2026-10-22T07:43:07"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.051947128027677536,
+                    "n_test_ics": 100,
+                    "param_count": 395921,
+                    "train_time_s": 1202.170169353485,
+                    "evaluated_at": "2026-10-22T08:03:16"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_500k/burgers/pit",
+            "study_name": "pit_burgers",
+            "completed_trials": 20,
+            "pruned_trials": 31,
+            "best_trial": 12,
+            "study_sha256": "3d2800bf5a1bf762cf2d8c3317df9145702e9839e6497d41ff45b15e307d064c",
+            "evaluated_trial": 12,
+            "rule_completed": 15
+        },
+        {
+            "cell": "budget_500k/burgers",
+            "arch": "pinto",
+            "space": "500k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo",
+            "notes": "For the current group the convergence rule first holds at 15 non-pruned trials (rule_completed); the study's later trials were run while the group's count was set by a study since replaced, and are not part of the protocol result.",
+            "eval_dir": "experiments/eval/budget_500k/burgers/pinto",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.03778812289237976,
+                    "n_test_ics": 100,
+                    "param_count": 198361,
+                    "train_time_s": 1159.380441904068,
+                    "evaluated_at": "2026-10-22T06:40:55"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.07238220423460007,
+                    "n_test_ics": 100,
+                    "param_count": 198361,
+                    "train_time_s": 1101.5985255241394,
+                    "evaluated_at": "2026-10-22T06:59:22"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.05118394270539284,
+                    "n_test_ics": 100,
+                    "param_count": 198361,
+                    "train_time_s": 1102.4653952121735,
+                    "evaluated_at": "2026-10-22T07:17:50"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.09033027291297913,
+                    "n_test_ics": 100,
+                    "param_count": 198361,
+                    "train_time_s": 1103.1215200424194,
+                    "evaluated_at": "2026-10-22T07:36:19"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.043237511068582535,
+                    "n_test_ics": 100,
+                    "param_count": 198361,
+                    "train_time_s": 1102.537995815277,
+                    "evaluated_at": "2026-10-22T07:54:47"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_500k/burgers/pinto",
+            "study_name": "pinto_burgers",
+            "completed_trials": 20,
+            "pruned_trials": 34,
+            "best_trial": 24,
+            "study_sha256": "424d4a5af50cedc6ca473ae53db1d1ee3cb502d44da42cff626cf5d096d5db0c",
+            "evaluated_trial": 24,
+            "rule_completed": 15
+        },
+        {
+            "cell": "budget_500k/burgers",
+            "arch": "keronet",
+            "space": "500k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo, tab:components",
+            "notes": "The group was extended 15 -> 20 (October 2026) for the original PI-DeepONet and PINTO studies, both since replaced. For the current group the convergence rule holds at 15 non-pruned trials (rule_completed), where the selection is #47 (evaluated 2026-07-28); the later #50 evaluation is not part of this release.",
+            "eval_dir": "experiments/eval/budget_500k/burgers/keronet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.0190549548715353,
+                    "n_test_ics": 100,
+                    "param_count": 327778,
+                    "train_time_s": 285.0702135562897,
+                    "evaluated_at": "2026-07-28T10:28:29"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.016686683520674706,
+                    "n_test_ics": 100,
+                    "param_count": 327778,
+                    "train_time_s": 268.0469355583191,
+                    "evaluated_at": "2026-07-28T10:33:01"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.01663740538060665,
+                    "n_test_ics": 100,
+                    "param_count": 327778,
+                    "train_time_s": 275.04957389831543,
+                    "evaluated_at": "2026-07-28T10:37:41"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.02424781769514084,
+                    "n_test_ics": 100,
+                    "param_count": 327778,
+                    "train_time_s": 268.44596457481384,
+                    "evaluated_at": "2026-07-28T10:42:14"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.01831292361021042,
+                    "n_test_ics": 100,
+                    "param_count": 327778,
+                    "train_time_s": 269.6273419857025,
+                    "evaluated_at": "2026-07-28T10:46:49"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_500k/burgers/keronet",
+            "study_name": "keronet_burgers",
+            "completed_trials": 20,
+            "pruned_trials": 40,
+            "best_trial": 50,
+            "study_sha256": "bff87496479845f359ed2999bc0a9532cc416cf4f3ae6274fecffdb6ebbc439b",
+            "evaluated_trial": 47,
+            "rule_completed": 15
+        },
+        {
+            "cell": "budget_500k/allen_cahn",
+            "arch": "pi_deeponet",
+            "space": "500k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo, tab:components",
+            "notes": "Trunk Fourier lift normalizes the query coordinates to [0, 1], as KerONet's does; study rerun from scratch with the cell's original search space and protocol (October 2026). It needed more trials than its group, which was then extended together under the convergence rule.",
+            "eval_dir": "experiments/eval/budget_500k/allen_cahn/pi_deeponet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.028945602476596832,
+                    "n_test_ics": 100,
+                    "param_count": 150785,
+                    "train_time_s": 214.9306218624115,
+                    "evaluated_at": "2026-10-27T20:21:19"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.03442812338471413,
+                    "n_test_ics": 100,
+                    "param_count": 150785,
+                    "train_time_s": 201.7161808013916,
+                    "evaluated_at": "2026-10-27T20:24:44"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.0379195436835289,
+                    "n_test_ics": 100,
+                    "param_count": 150785,
+                    "train_time_s": 201.85388469696045,
+                    "evaluated_at": "2026-10-27T20:28:09"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.0539512075483799,
+                    "n_test_ics": 100,
+                    "param_count": 150785,
+                    "train_time_s": 204.34567856788635,
+                    "evaluated_at": "2026-10-27T20:31:37"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.043532371520996094,
+                    "n_test_ics": 100,
+                    "param_count": 150785,
+                    "train_time_s": 201.93370628356934,
+                    "evaluated_at": "2026-10-27T20:35:03"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_500k/allen_cahn/pi_deeponet",
+            "study_name": "pi_deeponet_allen_cahn_500k",
+            "completed_trials": 22,
+            "pruned_trials": 33,
+            "best_trial": 52,
+            "study_sha256": "a937d87629bbe4bd0c4750242b571d6b028d942dfecfa8fd8f8a0bae2d0369b6",
+            "evaluated_trial": 52,
+            "rule_completed": 22
+        },
+        {
+            "cell": "budget_500k/allen_cahn",
+            "arch": "pit",
+            "space": "500k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo",
+            "eval_dir": "experiments/eval/budget_500k/allen_cahn/pit",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.04268035292625427,
+                    "n_test_ics": 100,
+                    "param_count": 310737,
+                    "train_time_s": 1044.412894487381,
+                    "evaluated_at": "2026-07-29T10:28:50"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.06569602340459824,
+                    "n_test_ics": 100,
+                    "param_count": 310737,
+                    "train_time_s": 999.6744441986084,
+                    "evaluated_at": "2026-07-29T10:45:36"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.10950330644845963,
+                    "n_test_ics": 100,
+                    "param_count": 310737,
+                    "train_time_s": 1001.4087080955505,
+                    "evaluated_at": "2026-07-29T11:02:24"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.08640148490667343,
+                    "n_test_ics": 100,
+                    "param_count": 310737,
+                    "train_time_s": 1000.620804309845,
+                    "evaluated_at": "2026-07-29T11:19:12"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.19742074608802795,
+                    "n_test_ics": 100,
+                    "param_count": 310737,
+                    "train_time_s": 1003.6853928565979,
+                    "evaluated_at": "2026-07-29T11:36:02"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_500k/allen_cahn/pit",
+            "study_name": "pit_allen_cahn",
+            "completed_trials": 22,
+            "pruned_trials": 28,
+            "best_trial": 34,
+            "study_sha256": "65e70fd705d54f46634ed6622d63f4d52c734a0b2d2094cb05240005fbd2401b",
+            "evaluated_trial": 34,
+            "notes": "Extended 21 -> 22 non-pruned trials under the convergence rule with the rerun PI-DeepONet study (October 2026); the first trials are the original study, unchanged. Selection unchanged.",
+            "rule_completed": 22
+        },
+        {
+            "cell": "budget_500k/allen_cahn",
+            "arch": "pinto",
+            "space": "500k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo",
+            "eval_dir": "experiments/eval/budget_500k/allen_cahn/pinto",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.01699509657919407,
+                    "n_test_ics": 100,
+                    "param_count": 439601,
+                    "train_time_s": 916.728893995285,
+                    "evaluated_at": "2026-07-29T10:27:09"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.015748213976621628,
+                    "n_test_ics": 100,
+                    "param_count": 439601,
+                    "train_time_s": 878.2035212516785,
+                    "evaluated_at": "2026-07-29T10:41:53"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.023108437657356262,
+                    "n_test_ics": 100,
+                    "param_count": 439601,
+                    "train_time_s": 877.8830406665802,
+                    "evaluated_at": "2026-07-29T10:56:38"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.02243274450302124,
+                    "n_test_ics": 100,
+                    "param_count": 439601,
+                    "train_time_s": 879.2976803779602,
+                    "evaluated_at": "2026-07-29T11:11:23"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.025247247889637947,
+                    "n_test_ics": 100,
+                    "param_count": 439601,
+                    "train_time_s": 901.7649590969086,
+                    "evaluated_at": "2026-08-01T12:27:35"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_500k/allen_cahn/pinto",
+            "study_name": "pinto_allen_cahn",
+            "completed_trials": 22,
+            "pruned_trials": 46,
+            "best_trial": 42,
+            "study_sha256": "2259027abdaeef3b7a19a11a2079963e696d20a78c6ea972902ca6fb84bec6b7",
+            "evaluated_trial": 42,
+            "notes": "Extended 21 -> 22 non-pruned trials under the convergence rule with the rerun PI-DeepONet study (October 2026); the first trials are the original study, unchanged. Selection unchanged.",
+            "rule_completed": 22
+        },
+        {
+            "cell": "budget_500k/allen_cahn",
+            "arch": "keronet",
+            "space": "500k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo, tab:components",
+            "notes": "Extended to 21; identical hyperparameters re-selected. Extended 21 -> 22 non-pruned trials under the convergence rule with the rerun PI-DeepONet study (October 2026); the first trials are the original study, unchanged. Its best trial #43 has the same hyperparameters as the evaluated #29.",
+            "eval_dir": "experiments/eval/budget_500k/allen_cahn/keronet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.012761984020471573,
+                    "n_test_ics": 100,
+                    "param_count": 374882,
+                    "train_time_s": 351.42709040641785,
+                    "evaluated_at": "2026-07-28T21:48:54"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.012077724561095238,
+                    "n_test_ics": 100,
+                    "param_count": 374882,
+                    "train_time_s": 334.9980573654175,
+                    "evaluated_at": "2026-07-28T21:54:33"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.01207136269658804,
+                    "n_test_ics": 100,
+                    "param_count": 374882,
+                    "train_time_s": 335.44580245018005,
+                    "evaluated_at": "2026-07-28T22:00:14"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.013143160380423069,
+                    "n_test_ics": 100,
+                    "param_count": 374882,
+                    "train_time_s": 335.6379930973053,
+                    "evaluated_at": "2026-07-28T22:05:54"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.011462301947176456,
+                    "n_test_ics": 100,
+                    "param_count": 374882,
+                    "train_time_s": 338.1793842315674,
+                    "evaluated_at": "2026-07-28T22:11:38"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_500k/allen_cahn/keronet",
+            "study_name": "keronet_allen_cahn",
+            "completed_trials": 22,
+            "pruned_trials": 51,
+            "best_trial": 43,
+            "study_sha256": "acf1aa29c1ffe4b925c3076744036fc2bd8103067027635e14bc2b36b850b693",
+            "evaluated_trial": 29,
+            "rule_completed": 22
+        },
+        {
+            "cell": "budget_500k/allen_cahn_2d",
+            "arch": "pi_deeponet",
+            "space": "500k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo, tab:components, tab:ablation",
+            "notes": "Paper's 2D benchmark (allen_cahn_2d, run as allen_cahn_2d_c). Trunk Fourier lift normalizes the query coordinates to [0, 1], as KerONet's does; study rerun from scratch with the cell's original search space and protocol (October 2026).",
+            "eval_dir": "experiments/eval/budget_500k/allen_cahn_2d/pi_deeponet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.15633973479270935,
+                    "n_test_ics": 100,
+                    "param_count": 159105,
+                    "train_time_s": 219.86950016021729,
+                    "evaluated_at": "2026-10-27T16:13:27"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.1842191517353058,
+                    "n_test_ics": 100,
+                    "param_count": 159105,
+                    "train_time_s": 203.61055850982666,
+                    "evaluated_at": "2026-10-27T16:17:24"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.1635597199201584,
+                    "n_test_ics": 100,
+                    "param_count": 159105,
+                    "train_time_s": 202.57828545570374,
+                    "evaluated_at": "2026-10-27T16:21:19"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.16325809061527252,
+                    "n_test_ics": 100,
+                    "param_count": 159105,
+                    "train_time_s": 201.58831119537354,
+                    "evaluated_at": "2026-10-27T16:25:13"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.17274577915668488,
+                    "n_test_ics": 100,
+                    "param_count": 159105,
+                    "train_time_s": 203.4614863395691,
+                    "evaluated_at": "2026-10-27T16:29:09"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_500k/allen_cahn_2d/pi_deeponet",
+            "study_name": "pi_deeponet_allen_cahn_2d_c_500k",
+            "completed_trials": 21,
+            "pruned_trials": 36,
+            "best_trial": 6,
+            "study_sha256": "dddde38e0c5d635b838f028de45fc7c9ddbd28e7f07b8e3555f00db686c7392d",
+            "evaluated_trial": 6,
+            "rule_completed": 21
+        },
+        {
+            "cell": "budget_500k/allen_cahn_2d",
+            "arch": "pit",
+            "space": "500k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo",
+            "notes": "Paper's 2D benchmark (allen_cahn_2d, run as allen_cahn_2d_c: IC amplitude 2.8, periodic boundary supervision), run from scratch (2026-10-23/26); the group {PINTO, PIT, KerONet, PI-DeepONet} met the convergence rule at 21 non-pruned trials.",
+            "eval_dir": "experiments/eval/budget_500k/allen_cahn_2d/pit",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.10627352446317673,
+                    "n_test_ics": 100,
+                    "param_count": 168913,
+                    "train_time_s": 3567.7379536628723,
+                    "evaluated_at": "2026-10-26T07:53:18"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.10421469807624817,
+                    "n_test_ics": 100,
+                    "param_count": 168913,
+                    "train_time_s": 3488.007796049118,
+                    "evaluated_at": "2026-10-26T08:53:06"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.1061302199959755,
+                    "n_test_ics": 100,
+                    "param_count": 168913,
+                    "train_time_s": 3490.1677942276,
+                    "evaluated_at": "2026-10-26T09:52:55"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.09440670907497406,
+                    "n_test_ics": 100,
+                    "param_count": 168913,
+                    "train_time_s": 3490.4854352474213,
+                    "evaluated_at": "2026-10-26T10:52:45"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.09175220131874084,
+                    "n_test_ics": 100,
+                    "param_count": 168913,
+                    "train_time_s": 3500.0937995910645,
+                    "evaluated_at": "2026-10-26T11:52:44"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_500k/allen_cahn_2d/pit",
+            "study_name": "pit_allen_cahn_2d_c_500k",
+            "completed_trials": 21,
+            "pruned_trials": 33,
+            "best_trial": 45,
+            "study_sha256": "eb7125ef9c0bd7a91e8b9932889ffe5004d3e695f87e3c90af967f1c4f1d4b3b",
+            "evaluated_trial": 45,
+            "rule_completed": 21
+        },
+        {
+            "cell": "budget_500k/allen_cahn_2d",
+            "arch": "pinto",
+            "space": "500k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo",
+            "notes": "Paper's 2D benchmark (allen_cahn_2d, run as allen_cahn_2d_c: IC amplitude 2.8, periodic boundary supervision), run from scratch (2026-10-23/26); the group {PINTO, PIT, KerONet, PI-DeepONet} met the convergence rule at 21 non-pruned trials. Seed 4 ran out of GPU memory as the fifth seed of a multi-seed process (2026-10-26) and was rerun alone.",
+            "eval_dir": "experiments/eval/budget_500k/allen_cahn_2d/pinto",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.07564251124858856,
+                    "n_test_ics": 100,
+                    "param_count": 369969,
+                    "train_time_s": 3660.020931482315,
+                    "evaluated_at": "2026-10-26T07:54:56"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.046051785349845886,
+                    "n_test_ics": 100,
+                    "param_count": 369969,
+                    "train_time_s": 3606.6513991355896,
+                    "evaluated_at": "2026-10-26T08:56:47"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.050193917006254196,
+                    "n_test_ics": 100,
+                    "param_count": 369969,
+                    "train_time_s": 3613.8625843524933,
+                    "evaluated_at": "2026-10-26T09:58:44"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.05576927214860916,
+                    "n_test_ics": 100,
+                    "param_count": 369969,
+                    "train_time_s": 3623.938102722168,
+                    "evaluated_at": "2026-10-26T11:00:52"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.0458637997508049,
+                    "n_test_ics": 100,
+                    "param_count": 369969,
+                    "train_time_s": 3584.330332994461,
+                    "evaluated_at": "2026-10-26T16:44:54"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_500k/allen_cahn_2d/pinto",
+            "study_name": "pinto_allen_cahn_2d_c_500k",
+            "completed_trials": 21,
+            "pruned_trials": 30,
+            "best_trial": 31,
+            "study_sha256": "482975a768020043fc5d86474db8b30319569adc75f86e440f10d5a6d881f279",
+            "evaluated_trial": 31,
+            "rule_completed": 21
+        },
+        {
+            "cell": "budget_500k/allen_cahn_2d",
+            "arch": "keronet",
+            "space": "500k",
+            "status": "reported",
+            "paper": "tab:budget_acc, tab:budget_pairwise, tab:budget_cost, tab:budget_hpo, tab:components, tab:ablation",
+            "notes": "Paper's 2D benchmark (allen_cahn_2d, run as allen_cahn_2d_c: IC amplitude 2.8, periodic boundary supervision), run from scratch (2026-10-23/26); the group {PINTO, PIT, KerONet, PI-DeepONet} met the convergence rule at 21 non-pruned trials.",
+            "eval_dir": "experiments/eval/budget_500k/allen_cahn_2d/keronet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.06244194135069847,
+                    "n_test_ics": 100,
+                    "param_count": 412978,
+                    "train_time_s": 502.1481521129608,
+                    "evaluated_at": "2026-10-26T11:11:06"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.06110183149576187,
+                    "n_test_ics": 100,
+                    "param_count": 412978,
+                    "train_time_s": 483.1596989631653,
+                    "evaluated_at": "2026-10-26T11:19:44"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.0612117275595665,
+                    "n_test_ics": 100,
+                    "param_count": 412978,
+                    "train_time_s": 482.53985929489136,
+                    "evaluated_at": "2026-10-26T11:28:21"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.06215456873178482,
+                    "n_test_ics": 100,
+                    "param_count": 412978,
+                    "train_time_s": 482.5552399158478,
+                    "evaluated_at": "2026-10-26T11:36:58"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.060578636825084686,
+                    "n_test_ics": 100,
+                    "param_count": 412978,
+                    "train_time_s": 482.42729091644287,
+                    "evaluated_at": "2026-10-26T11:45:35"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_500k/allen_cahn_2d/keronet",
+            "study_name": "keronet_allen_cahn_2d_c_500k",
+            "completed_trials": 21,
+            "pruned_trials": 21,
+            "best_trial": 27,
+            "study_sha256": "ff95de6d607e24118deb21477b7011d3faa9825aa91b99057b6f76c9ff346a84",
+            "evaluated_trial": 27,
+            "rule_completed": 21
+        },
+        {
+            "cell": "budget_500k/allen_cahn_2d",
+            "arch": "mkeronet",
+            "space": "500k",
+            "status": "reported",
+            "paper": "tab:ablation, tab:components",
+            "notes": "Paper's 2D benchmark (allen_cahn_2d, run as allen_cahn_2d_c: IC amplitude 2.8, periodic boundary supervision), run from scratch (2026-10-23/26); studied on its own and matched to the main group's 21 non-pruned trials.",
+            "eval_dir": "experiments/eval/budget_500k/allen_cahn_2d/mkeronet",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.060224749147892,
+                    "n_test_ics": 100,
+                    "param_count": 431857,
+                    "train_time_s": 640.6260113716125,
+                    "evaluated_at": "2026-10-26T12:04:23"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.06144982948899269,
+                    "n_test_ics": 100,
+                    "param_count": 431857,
+                    "train_time_s": 630.869909286499,
+                    "evaluated_at": "2026-10-26T12:15:27"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.06153150647878647,
+                    "n_test_ics": 100,
+                    "param_count": 431857,
+                    "train_time_s": 627.496598482132,
+                    "evaluated_at": "2026-10-26T12:26:28"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.0621829554438591,
+                    "n_test_ics": 100,
+                    "param_count": 431857,
+                    "train_time_s": 630.2491669654846,
+                    "evaluated_at": "2026-10-26T12:37:32"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.05982206016778946,
+                    "n_test_ics": 100,
+                    "param_count": 431857,
+                    "train_time_s": 621.131276845932,
+                    "evaluated_at": "2026-10-26T12:48:26"
+                }
+            ],
+            "hpo_dir": "experiments/hpo/budget_500k/allen_cahn_2d/mkeronet",
+            "study_name": "mkeronet_allen_cahn_2d_c_500k",
+            "completed_trials": 21,
+            "pruned_trials": 12,
+            "best_trial": 23,
+            "study_sha256": "6043e7117f989aed637e61fcaee7bcd03fe41daa8c2071b192d5453beb1c39bd",
+            "evaluated_trial": 23,
+            "rule_completed": 21
+        },
+        {
+            "cell": "s_sweep/burgers",
+            "arch": "keronet_S4",
+            "status": "reported",
+            "paper": "fig:s_sweep",
+            "notes": "All hyperparameters fixed at the 200k Burgers selection except S. Shown with the selected S (main_200k/burgers/keronet).",
+            "eval_dir": "experiments/eval/s_sweep/burgers/keronet_S4",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.0798078179359436,
+                    "n_test_ics": 100,
+                    "param_count": 96402,
+                    "train_time_s": 282.08222126960754,
+                    "evaluated_at": "2026-08-03T08:38:34"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.09899520128965378,
+                    "n_test_ics": 100,
+                    "param_count": 96402,
+                    "train_time_s": 270.2515826225281,
+                    "evaluated_at": "2026-08-03T08:43:08"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.08511421829462051,
+                    "n_test_ics": 100,
+                    "param_count": 96402,
+                    "train_time_s": 269.1941559314728,
+                    "evaluated_at": "2026-08-03T08:47:42"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.08527284860610962,
+                    "n_test_ics": 100,
+                    "param_count": 96402,
+                    "train_time_s": 269.640878200531,
+                    "evaluated_at": "2026-08-03T08:52:16"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.058225054293870926,
+                    "n_test_ics": 100,
+                    "param_count": 96402,
+                    "train_time_s": 269.4146785736084,
+                    "evaluated_at": "2026-08-03T08:56:50"
+                }
+            ]
+        },
+        {
+            "cell": "s_sweep/burgers",
+            "arch": "keronet_S8",
+            "status": "reported",
+            "paper": "fig:s_sweep",
+            "eval_dir": "experiments/eval/s_sweep/burgers/keronet_S8",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.048769477754831314,
+                    "n_test_ics": 100,
+                    "param_count": 121234,
+                    "train_time_s": 283.9465751647949,
+                    "evaluated_at": "2026-08-03T08:40:50"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.04881582781672478,
+                    "n_test_ics": 100,
+                    "param_count": 121234,
+                    "train_time_s": 271.12657594680786,
+                    "evaluated_at": "2026-08-03T08:45:26"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.04079024866223335,
+                    "n_test_ics": 100,
+                    "param_count": 121234,
+                    "train_time_s": 271.0704171657562,
+                    "evaluated_at": "2026-08-03T08:50:01"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.07037084549665451,
+                    "n_test_ics": 100,
+                    "param_count": 121234,
+                    "train_time_s": 271.59583592414856,
+                    "evaluated_at": "2026-08-03T08:54:37"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.027802085503935814,
+                    "n_test_ics": 100,
+                    "param_count": 121234,
+                    "train_time_s": 270.93626618385315,
+                    "evaluated_at": "2026-08-03T08:59:13"
+                }
+            ],
+            "notes": "Shown with the selected S (main_200k/burgers/keronet)."
+        },
+        {
+            "cell": "s_sweep/burgers",
+            "arch": "keronet_S32",
+            "status": "reported",
+            "paper": "fig:s_sweep",
+            "notes": "Exceeds the 200k cap (270,226 parameters). Shown with the selected S (main_200k/burgers/keronet).",
+            "eval_dir": "experiments/eval/s_sweep/burgers/keronet_S32",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.021445658057928085,
+                    "n_test_ics": 100,
+                    "param_count": 270226,
+                    "train_time_s": 295.6504535675049,
+                    "evaluated_at": "2026-08-03T09:04:46"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.026902470737695694,
+                    "n_test_ics": 100,
+                    "param_count": 270226,
+                    "train_time_s": 280.6548156738281,
+                    "evaluated_at": "2026-08-03T09:09:31"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.021321458742022514,
+                    "n_test_ics": 100,
+                    "param_count": 270226,
+                    "train_time_s": 279.74120569229126,
+                    "evaluated_at": "2026-08-03T09:14:15"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.02652610093355179,
+                    "n_test_ics": 100,
+                    "param_count": 270226,
+                    "train_time_s": 280.2126512527466,
+                    "evaluated_at": "2026-08-03T09:19:00"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.017824549227952957,
+                    "n_test_ics": 100,
+                    "param_count": 270226,
+                    "train_time_s": 280.54164385795593,
+                    "evaluated_at": "2026-08-03T09:23:45"
+                }
+            ]
+        },
+        {
+            "cell": "s_sweep/allen_cahn",
+            "arch": "keronet_S4",
+            "status": "reported",
+            "paper": "fig:s_sweep",
+            "eval_dir": "experiments/eval/s_sweep/allen_cahn/keronet_S4",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.008671363815665245,
+                    "n_test_ics": 100,
+                    "param_count": 175442,
+                    "train_time_s": 319.40150117874146,
+                    "evaluated_at": "2026-08-03T09:58:21"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.013816182501614094,
+                    "n_test_ics": 100,
+                    "param_count": 175442,
+                    "train_time_s": 301.5638585090637,
+                    "evaluated_at": "2026-08-03T10:03:27"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.015008953399956226,
+                    "n_test_ics": 100,
+                    "param_count": 175442,
+                    "train_time_s": 302.31564140319824,
+                    "evaluated_at": "2026-08-03T10:08:34"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.016294939443469048,
+                    "n_test_ics": 100,
+                    "param_count": 175442,
+                    "train_time_s": 302.921523809433,
+                    "evaluated_at": "2026-08-03T10:13:41"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.013329330831766129,
+                    "n_test_ics": 100,
+                    "param_count": 175442,
+                    "train_time_s": 303.12642645835876,
+                    "evaluated_at": "2026-08-03T10:18:49"
+                }
+            ],
+            "notes": "Shown with the selected S (main_200k/allen_cahn/keronet)."
+        },
+        {
+            "cell": "s_sweep/allen_cahn",
+            "arch": "keronet_S16",
+            "status": "reported",
+            "paper": "fig:s_sweep",
+            "eval_dir": "experiments/eval/s_sweep/allen_cahn/keronet_S16",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.010573601350188255,
+                    "n_test_ics": 100,
+                    "param_count": 224978,
+                    "train_time_s": 324.193439245224,
+                    "evaluated_at": "2026-08-03T09:33:58"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.014040747657418251,
+                    "n_test_ics": 100,
+                    "param_count": 224978,
+                    "train_time_s": 306.79844665527344,
+                    "evaluated_at": "2026-08-03T09:39:10"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.013759206980466843,
+                    "n_test_ics": 100,
+                    "param_count": 224978,
+                    "train_time_s": 306.9751191139221,
+                    "evaluated_at": "2026-08-03T09:44:22"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.014699513092637062,
+                    "n_test_ics": 100,
+                    "param_count": 224978,
+                    "train_time_s": 307.0516037940979,
+                    "evaluated_at": "2026-08-03T09:49:34"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.014408890157938004,
+                    "n_test_ics": 100,
+                    "param_count": 224978,
+                    "train_time_s": 309.34277153015137,
+                    "evaluated_at": "2026-08-03T09:54:48"
+                }
+            ],
+            "notes": "Shown with the selected S (main_200k/allen_cahn/keronet)."
+        },
+        {
+            "cell": "s_sweep/allen_cahn",
+            "arch": "keronet_S32",
+            "status": "reported",
+            "paper": "fig:s_sweep",
+            "notes": "Exceeds the 200k cap (291,026 parameters). Shown with the selected S (main_200k/allen_cahn/keronet).",
+            "eval_dir": "experiments/eval/s_sweep/allen_cahn/keronet_S32",
+            "seeds": [
+                {
+                    "seed": 0,
+                    "rel_l2_mean": 0.009375364519655704,
+                    "n_test_ics": 100,
+                    "param_count": 291026,
+                    "train_time_s": 329.6923072338104,
+                    "evaluated_at": "2026-08-03T09:30:14"
+                },
+                {
+                    "seed": 1,
+                    "rel_l2_mean": 0.012583041563630104,
+                    "n_test_ics": 100,
+                    "param_count": 291026,
+                    "train_time_s": 310.71058773994446,
+                    "evaluated_at": "2026-08-03T09:35:29"
+                },
+                {
+                    "seed": 2,
+                    "rel_l2_mean": 0.014328211545944214,
+                    "n_test_ics": 100,
+                    "param_count": 291026,
+                    "train_time_s": 310.46242213249207,
+                    "evaluated_at": "2026-08-03T09:40:45"
+                },
+                {
+                    "seed": 3,
+                    "rel_l2_mean": 0.013802704401314259,
+                    "n_test_ics": 100,
+                    "param_count": 291026,
+                    "train_time_s": 311.0206172466278,
+                    "evaluated_at": "2026-08-03T09:46:01"
+                },
+                {
+                    "seed": 4,
+                    "rel_l2_mean": 0.012384890578687191,
+                    "n_test_ics": 100,
+                    "param_count": 291026,
+                    "train_time_s": 310.566782951355,
+                    "evaluated_at": "2026-08-03T09:51:16"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+config_version: 1
+arch: pi_deeponet
+pde:
+  name: burgers
+  kwargs: {}
+hparams:
+  n_sensors: 80
+  weight_decay: 0.0001
+  p: 288
+  branch_hidden: 128
+  trunk_hidden: 160
+  branch_layers_n: 4
+  trunk_layers_n: 4
+  mapping_size: 32
+training:
+  n_iter: 20000
+  init_lr: 0.001
+  end_lr_frac: 0.01
+  warmup_frac: 0.0
+  weight_decay: 0.0001
+  bcs_batch_size: 14
+  res_batch_size: 14
+metadata:
+  optuna_study: pi_deeponet_burgers_300k
+  best_trial_number: 16
+  best_rel_l2_mean: 0.22274993360042572
+  best_rel_l2_std: 0.08942314237356186
+  param_count: 231105
+  train_time_sec: 237.5091106891632
+  completed_trials: 20
+  pruned_trials: 37
+  generated_at: '2026-07-26T05:24:59'
+  note: written by tools/config_from_trial.py (trial 16)

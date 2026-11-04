@@ -1,0 +1,30 @@
+config_version: 1
+arch: pinto
+pde:
+  name: burgers
+  kwargs: {}
+hparams:
+  n_sensors: 80
+  weight_decay: 0.0001
+  n_cross_attn: 4
+  n_heads: 4
+  d_model: 48
+  key_dim: 80
+training:
+  n_iter: 20000
+  init_lr: 0.001
+  end_lr_frac: 0.01
+  warmup_frac: 0.0
+  weight_decay: 0.0001
+  bcs_batch_size: 14
+  res_batch_size: 14
+metadata:
+  optuna_study: pinto_burgers
+  best_trial_number: 67
+  best_rel_l2_mean: 0.02677117846906185
+  best_rel_l2_std: 0.015348074957728386
+  param_count: 280801
+  train_time_sec: 1370.009474992752
+  completed_trials: 15
+  pruned_trials: 59
+  generated_at: '2026-07-26T06:54:54'
