@@ -164,7 +164,17 @@ Wall-clock training times are hardware-specific.
 
 ## Citation
 
-See `CITATION.cff`.
+```bibtex
+@inproceedings{dale2026keronet,
+  title     = {{KerONet}: Rethinking Cross-Attention for Physics-Informed Operator Learning},
+  author    = {Dale, Seth and Koh, Carolyn and Mehta, Dinesh},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year      = {2026},
+  url       = {https://openreview.net/forum?id=kaHFJVwIAG}
+}
+```
+
+The same reference is in `CITATION.cff`.
 
 ## License
 
