@@ -9,8 +9,8 @@ Code, hyperparameter-optimization (HPO) studies, and evaluation artifacts for
 KerONet replaces PI-DeepONet's bilinear branch-trunk readout with a single
 softmax-weighted readout: the trunk emits a query, the branch emits `S`
 key/value slots, and one softmax combines them before a small post-readout MLP.
-This repository compares it with PI-DeepONet, PIT, and PINTO under a matched
-parameter budget and a shared HPO and evaluation protocol, all trained purely
+This repository compares it with PI-DeepONet, PIT, and PINTO under matched
+parameter budgets and a shared HPO and evaluation protocol, all trained purely
 from physics (PDE residual plus initial/boundary conditions).
 
 ## Contents
